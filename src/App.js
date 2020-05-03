@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import {Runtime, Library, Inspector} from "@observablehq/runtime";
+import define from "./chart.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    const runtime = new Runtime();
+    //runtime.module(define, Inspector.into(this.animationRef.current));
+    // runtime.module(define, name => {
+    //   if (name === "chart") {
+    //     return new Inspector.into(this.animationRef.current);
+    //   }
+    // })
+
+    runtime.module(define, name => {
+      if (name === "chart") {
+        return new Inspector(document.querySelector("#chart"));
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div id="chart"></div>
+      </div>
+    );
+  }
 }
 
 export default App;
