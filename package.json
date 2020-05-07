@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@jefersonalves/fan-chart": "https://api.observablehq.com/@jefersonalves/fan-chart.tgz?v=3",
     "@observablehq/runtime": "4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
