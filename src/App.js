@@ -32,105 +32,104 @@ function App() {
             <div className="allState">
                 <div className="uniqueState">
                     <p>São Paulo</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"SP"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Rio de Janeiro</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"RJ"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Minas Gerais</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"MG"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Paraná</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"PR"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Rio Grande do Norte</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"RN"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Goiás</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"GO"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Santa Catarina</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"SC"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Rio grande do sul</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"RS"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Mato Grosso</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"MT"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Mato Grosso do sul</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"MS"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Espírito Santo</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"ES"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Ceará</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"CE"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Pernambuco</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"PE"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Paraíba</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"PB"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Bahia</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"BA"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Amazonas</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"AM"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Piauí</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"PI"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Distrito Federal</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"DF"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Roraima</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"RR"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Amapá</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"AP"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Tocantins</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"TO"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Sergipe</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"SE"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Acre</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"AC"}></FanChart>
                 </div>
                 <div className="uniqueState">
                     <p>Rondônia</p>
-                    <FanChart className="state" chartid={"chart1"}></FanChart>
+                    <FanChart className="state" uf={"RO"}></FanChart>
                 </div>
             </div>
         </div>
             <br></br>
             <div className="Footer">
-                <p className="copyright"> &#xA9; Copyright 2020 - TODOS OS DIREITOS RESERVADOS</p>
                 <br></br>
             </div>
         </>

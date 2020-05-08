@@ -8,11 +8,13 @@ class FanChart extends Component {
     componentDidMount() {
         const runtime = new Runtime();
 
-        runtime.module(define, name => {
+        const main = runtime.module(define, name => {
             if (name === "chart") {
                 return new Inspector(this.chartRef.current);
             }
-        })
+        });
+
+        main.redefine("state", this.props.uf);
     }
 
     render() {
