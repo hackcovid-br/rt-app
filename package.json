@@ -2,7 +2,7 @@
   "name": "hackcovid-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hackcovid-br.github.io/rt-app",
+  "homepage": "https://hackcovid.com.br",
   "dependencies": {
     "@jefersonalves/fan-chart": "https://api.observablehq.com/@jefersonalves/fan-chart.tgz?v=3",
     "@jefersonalves/rt-chart": "https://api.observablehq.com/@jefersonalves/rt-chart.tgz?v=3",
