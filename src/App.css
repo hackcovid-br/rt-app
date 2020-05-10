@@ -93,6 +93,10 @@
 
 @media(max-width: 1024px)
 {
+  .barchartstyle
+  {
+    transform: rotate(90deg);
+  }
   .bodyPage{
     margin-top: 20px;
     margin-left: 45px;
