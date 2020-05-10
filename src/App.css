@@ -85,13 +85,13 @@
   {
     display: grid;
     list-style: none;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
     padding: auto;
   }
 }
 
-@media(max-width: 1300px)
+@media(max-width: 1024px)
 {
   .bodyPage{
     margin-top: 20px;
