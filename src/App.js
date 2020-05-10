@@ -143,6 +143,7 @@ function App() {
             <br></br>
             <div className="Footer">
                 <br></br>
+                <br></br>
             </div>
         </>
     );
