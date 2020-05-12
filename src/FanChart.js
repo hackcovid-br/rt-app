@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Runtime, Library, Inspector} from "@observablehq/runtime";
-import define from "@jefersonalves/fan-chart";
+import define from "@bbjacob123/fan-chart";
 
 class FanChart extends Component {
     chartRef = React.createRef();
