@@ -1,15 +1,22 @@
 .bodyPage{
-  margin-top: 40px;
-  margin-left: 65px;
+  font-family: "SF Pro Text","Helvetica Neue",-apple-system,BlinkMacSystemFont,"Helvetica","Segoe UI","Arial",sans-serif;
+  margin-top: 55px;
+  margin-left: 110px;
   margin-right: 65px;
   margin-bottom: 20px;
 }
 
-.hackcovid
+.logohc
 {
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 23px;
+  height: 100px;
+}
+
+.rtcovid
+{
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.2em !important;
 }
 
 .link
@@ -26,17 +33,14 @@
 {
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 30px;
 }
 
 .answerRt
 {
   font-family: sans-serif;
-}
-
-.hackcoviddescription
-{
-  font-family: sans-serif;
+  padding-right: 20%;
+  line-height: 180%;
 }
 
 .latestWeek{
@@ -66,21 +70,21 @@
   font-weight: bold;
 }
 
+.footertitle
+{
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .Footer
 {
-  background-color: lightgray;
+  background-color: #f7f6f3;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-@media(max-width: 1400px)
+@media(max-width: 1250px)
 {
-  .bodyPage{
-    margin-top: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 15px;
-  }
   .allState
   {
     display: grid;
@@ -93,16 +97,6 @@
 
 @media(max-width: 1024px)
 {
-  .barchartstyle
-  {
-    transform: rotate(90deg);
-  }
-  .bodyPage{
-    margin-top: 20px;
-    margin-left: 45px;
-    margin-right: 45px;
-    margin-bottom: 10px;
-  }
   .allState
   {
     display: grid;
@@ -115,9 +109,34 @@
 
 @media(max-width: 500px)
 {
+  .logohc
+  {
+    height: 80px;
+  }
+  .rtcovid
+  {
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.2em !important;
+  }
+  .whatsRt
+  {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .answerRt
+  {
+    font-family: sans-serif;
+    padding-right: 0;
+    line-height: 140%;
+  }
   .barchartstyle
   {
     transform: rotate(90deg);
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .node-text
    {
@@ -140,5 +159,10 @@
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
     padding: auto;
+  }
+  .footertitle
+  {
+    font-weight: bold;
+    font-size: 18px;
   }
 }

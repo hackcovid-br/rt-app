@@ -1,21 +1,15 @@
 import React from 'react';
-import FanChart from './FanChart.js'
+import FanChart from './FanChart.js';
 import BarChart from './BarChart';
+import logo from './assets/logo_HC.png';
 import './App.css';
 
 function App() {
     return (
     <>
         <div className="bodyPage">
-            <h1>R<sub>t</sub> Covid-19</h1>
-            <p className="hackcovid">O que é o HackCovid?</p>
-            <p className="hackcoviddescription">É um projeto social que tem como objetivo auxiliar na diminuição do impacto do covid-19 
-            através de dados e machine learning. Nossa missão é calcular e mostrar em tempo real o Rt (número de reprodução do 
-            vírus no tempo t) do covid-19 de todos os estados do Brasil. Uma vez com acesso a este dashboard, 
-            o cidadão brasileiro consegue entender como o virus está se espalhando e quão efetivo estão sendo as 
-            medidas de quarentena em sua região. E os governos estaduais, com a visão do Rt, conseguem avaliar melhor as
-             medidas de restrição, para maximizar tanto a prosperidade econômica quanto a saúde e segurança de sua população.
-            </p>
+            <img className="logohc" src={logo} alt="HackCovid19" />
+            <h1 className="rtcovid">R<sub>t</sub> Covid-19</h1>
             <p className="whatsRt">O que é o Rt?</p>
             <p className="answerRt">Rt é o numero de reprodução do vírus no tempo t. Esse número descreve a média de  
             pessoas que são contaminadas por pessoa infectada. A forma mais conhecida dessa métrica é o número básico 
@@ -145,6 +139,9 @@ function App() {
             <br></br>
             <div className="Footer">
                 <br></br>
+                <p className="footertitle">Cálculo R<sub>t</sub></p>
+                <p className="footertitle">Recursos</p>
+                <p className="footertitle">limitações</p>
                 <br></br>
             </div>
         </>
