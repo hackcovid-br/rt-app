@@ -119,6 +119,14 @@
   {
     transform: rotate(90deg);
   }
+  .node-text
+   {
+    transform: rotate(-90deg);
+   }
+  .axis-label
+   {
+    transform: rotate(-90deg);
+   }
   .bodyPage{
     margin-top: 10px;
     margin-left: 25px;

@@ -28,7 +28,9 @@ function App() {
             </p>
             <p className="States">Comparação entre estados</p>
             <p className="latestWeek">Último Dia</p>
-            <BarChart></BarChart>
+            <div className="barchartstyle">
+                <BarChart></BarChart>
+            </div>
             <div className="allState">
                 <div className="uniqueState">
                     <p>Acre</p>

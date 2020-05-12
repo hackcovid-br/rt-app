@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Runtime, Library, Inspector} from "@observablehq/runtime";
-import define from "@jefersonalves/rt-chart";
+import define from "@bbjacob123/rt-chart";
 
 class BarChart extends Component {
     chartRef = React.createRef();
