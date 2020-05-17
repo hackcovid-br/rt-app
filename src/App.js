@@ -10,18 +10,17 @@ function App() {
         <div className="bodyPage">
             <img className="logohc" src={logo} alt="HackCovid19" />
             <h1 className="rtcovid">R<sub>t</sub> Covid-19</h1>
-            <p className="whatsRt">O que é o Rt?</p>
-            <p className="answerRt">Rt é o numero de reprodução do vírus no tempo t. Esse número descreve a média de  
+            <p className="whatsRt">O que é o <em>R<sub>t</sub></em>?</p>
+            <p className="answerRt"><em>R<sub>t</sub></em>  é o numero de reprodução do vírus no tempo <em>t</em>. Esse número descreve a média de  
             pessoas que são contaminadas por pessoa infectada. A forma mais conhecida dessa métrica é o número básico 
-            de reprodução, R0 (r-zero) quando t=0. O problema do R0 é que ele não adapta a mudanças de comportamento ou 
+            de reprodução, <em>R<sub>0</sub></em> (r-zero) quando <em>t</em> = 0. O problema do <em>R<sub>0</sub></em> é que ele não adapta a mudanças de comportamento ou 
             restrições governamentais e sociais, ele é fixo.
-            Na forma que a pandemia evolui e as restrições aumentam ou diminuem, o Rt também muda. Quando Rt > 1, a 
-            pandemia espalha para uma porção grande da população. Se o Rt menor que 1, a pandemia diminui rapidamente antes de 
+            Na forma que a pandemia evolui e as restrições aumentam ou diminuem, o <em>R<sub>t</sub></em> também muda. Quando o <em>R<sub>t</sub></em> > 1, a 
+            pandemia espalha para uma porção grande da população. Se o <em>R<sub>t</sub></em> for menor que 1, a pandemia diminui rapidamente antes de 
             infectar muita gente.
-            Inspirados pelo <a className="link" href="https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb">notebook</a> do Kevin Systrom, reproduzimos o modelo utilizando os dados do Brasil.
             </p>
             <p className="States">Comparação entre estados</p>
-            <p className="latestWeek">Último Dia</p>
+            <p className="latestWeek">Dados até:</p>
             <div className="barchartstyle">
                 <BarChart></BarChart>
             </div>
@@ -139,9 +138,28 @@ function App() {
             <br></br>
             <div className="Footer">
                 <br></br>
-                <p className="footertitle">Cálculo R<sub>t</sub></p>
                 <p className="footertitle">Recursos</p>
-                <p className="footertitle">limitações</p>
+        <ul>
+          <li>
+           Jupyter <a className="link" href="https://github.com/k-sys/covid-19/blob/master/Realtime%20R0.ipynb">notebook</a> do Kevin Systrom com sua metodologia para calcular <em>R<sub>t</sub></em>. 
+          </li>
+	<li>
+           <a className="link" href="https://github.com/wcota/covid19br">API</a> dos dados usados no modelo.
+          </li>
+	</ul>
+                <p className="footertitle">Limitações da metodologia</p>
+		 <ul>
+          <li>
+		Nossa base de dados é sujeita a dois principais efeitos: o primeiro, é o efeito da subnotificação e o segundo, 
+		é o efeito do baixo número de testes no Brasil. Mesmo assim, o que mais importa é a variação entre os números de casos, 
+		mas que também pode ser afetada se tiver uma grande variação no número de testes disponíveis. 
+          </li>
+        <li>
+		Existe um período de incubação onde pessoas conseguem infectar outras pessoas mas não mostram nenhum sintoma. 
+		Esse modelo assume que a infecciosidade começa quando uma pessoa testa positivo e não quando ela é de fato infecciosa. 
+		Então é importante levar em consideração que os valores do Rt podem estar alguns dias atrasados. 
+          </li>
+        </ul>
                 <br></br>
             </div>
         </>
