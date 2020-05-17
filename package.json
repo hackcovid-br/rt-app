@@ -3,40 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://hackcovid.com.br",
+  "scripts": {
+    "start": "gatsby develop --open",
+    "build": "gatsby build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "prettier": "prettier --write \"**/*.{js,jsx,json,md,scss}\"",
+    "lint:fix": "eslint . --ext .js,.jsx --fix",
+    "format": "yarn prettier && yarn lint:fix"
+  },
   "dependencies": {
     "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart.tgz?v=3",
     "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart.tgz?v=3",
     "@observablehq/runtime": "4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-helmet": "^6.0.0",
+    "gatsby": "^2.21.21",
+    "gatsby-alias-imports": "^1.0.4",
+    "gatsby-env-variables": "^2.0.0",
+    "gatsby-optional-chaining": "^1.0.1",
+    "gatsby-plugin-dynamic-routes": "^1.0.0",
+    "gatsby-plugin-manifest": "^2.4.2",
+    "gatsby-plugin-offline": "^3.2.1",
+    "gatsby-plugin-provide-react": "^1.0.2",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sass": "^2.2.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1"
   }
 }

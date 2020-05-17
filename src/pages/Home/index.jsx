@@ -1,7 +1,6 @@
-import React from 'react';
-import FanChart from '../FanChart.js';
-import BarChart from '../BarChart';
-import statesOfBrazil from '../helpers/statesOfBrazil';
+import FanChart from 'components/FanChart.js';
+import BarChart from 'components/BarChart.js';
+import statesOfBrazil from 'helpers/statesOfBrazil.js';
 
 export default function Home () {
   return (
