@@ -23,8 +23,8 @@ export default function Home () {
           <BarChart/>
       </div>
       <ul className="allState">
-          {statesOfBrazil.map((uniqueState, index) => (
-              <li key={ index } className="uniqueState">
+          {statesOfBrazil.map(uniqueState => (
+              <li key={ uniqueState.uf } className="uniqueState">
                   <p>{ uniqueState.name }</p>
                   <FanChart className="state" uf={ uniqueState.uf }/>
               </li>
