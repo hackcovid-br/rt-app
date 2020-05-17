@@ -1,55 +1,49 @@
-.bodyPage{
-  font-family: "SF Pro Text","Helvetica Neue",-apple-system,BlinkMacSystemFont,"Helvetica","Segoe UI","Arial",sans-serif;
+.bodyPage {
+  font-family: "SF Pro Text", "Helvetica Neue", -apple-system,
+    BlinkMacSystemFont, "Helvetica", "Segoe UI", "Arial", sans-serif;
   margin-top: 55px;
   margin-left: 110px;
   margin-right: 65px;
   margin-bottom: 20px;
 }
 
-.logohc
-{
+.logohc {
   height: 100px;
 }
 
-.rtcovid
-{
+.rtcovid {
   font-weight: 600;
   font-size: 38px;
   letter-spacing: -0.5px;
   margin-bottom: 0.2em !important;
 }
 
-.link
-{
+.link {
   text-decoration: none;
 }
 
-.link:hover
-{
+.link:hover {
   text-decoration: underline;
 }
 
-.whatsRt
-{
+.whatsRt {
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
 
-.answerRt
-{
+.answerRt {
   font-family: sans-serif;
   padding-right: 20%;
   line-height: 180%;
 }
 
-.latestWeek{
+.latestWeek {
   font-family: sans-serif;
   font-weight: bold;
 }
 
-.allState
-{
+.allState {
   display: grid;
   list-style: none;
   grid-template-columns: repeat(4, 1fr);
@@ -57,35 +51,29 @@
   padding: 0;
 }
 
-.States
-{
+.States {
   font-weight: bold;
   font-size: 25px;
 }
 
-.uniqueState
-{
+.uniqueState {
   font-family: sans-serif;
   font-size: 15px;
   font-weight: bold;
 }
 
-.footertitle
-{
+.footertitle {
   font-weight: bold;
   font-size: 18px;
 }
 
-.Footer
-{
+.Footer {
   background-color: #f7f6f3;
   padding: 20px 50px;
 }
 
-@media(max-width: 1250px)
-{
-  .allState
-  {
+@media (max-width: 1250px) {
+  .allState {
     display: grid;
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
@@ -94,10 +82,8 @@
   }
 }
 
-@media(max-width: 1024px)
-{
-  .allState
-  {
+@media (max-width: 1024px) {
+  .allState {
     display: grid;
     list-style: none;
     grid-template-columns: repeat(2, 1fr);
@@ -106,61 +92,51 @@
   }
 }
 
-@media(max-width: 500px)
-{
-  .logohc
-  {
+@media (max-width: 500px) {
+  .logohc {
     height: 80px;
   }
-  .rtcovid
-  {
+  .rtcovid {
     font-weight: 600;
     font-size: 28px;
     letter-spacing: -0.5px;
     margin-bottom: 0.2em !important;
   }
-  .whatsRt
-  {
+  .whatsRt {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
   }
-  .answerRt
-  {
+  .answerRt {
     font-family: sans-serif;
     padding-right: 0;
     line-height: 140%;
   }
-  .barchartstyle
-  {
+  .barchartstyle {
     transform: rotate(90deg);
     margin-left: 15px;
     margin-right: 15px;
   }
-  .node-text
-   {
+  .node-text {
     transform: rotate(-90deg);
-   }
-  .axis-label
-   {
+  }
+  .axis-label {
     transform: rotate(-90deg);
-   }
-  .bodyPage{
+  }
+  .bodyPage {
     margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 10px;
   }
-  .allState
-  {
+  .allState {
     display: grid;
     list-style: none;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
     padding: 0;
   }
-  .footertitle
-  {
+  .footertitle {
     font-weight: bold;
     font-size: 18px;
   }

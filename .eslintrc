@@ -1,0 +1,76 @@
+{
+  "ignorePatterns": ["node_modules/", "public/", ".cache/", ".idea/", "static/"],
+  "rules": {
+    "no-undef": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "import/no-unresolved": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always",
+        "groups": ["builtin", "external", "internal", "index", "sibling", "parent"],
+        "pathGroups": [
+          {
+            "pattern": "components/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "hooks/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "pages/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "styles/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "helpers/**",
+            "group": "internal"
+          }
+        ]
+      }
+    ]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        [
+          "components",
+          "./src/components"
+        ],
+        [
+          "hooks",
+          "./src/hooks"
+        ]
+      ],
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  }
+}

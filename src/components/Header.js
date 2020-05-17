@@ -1,10 +1,9 @@
-import React from 'react';
-import logo from '../assets/logo_HC.png';
-
-export default function Header () {
+function Header() {
   return (
     <header>
-      <img className="logohc" src={logo} alt="HackCovid19" />
+      <img className="logohc" src="/images/logo_HC.png" alt="HackCovid19" />
     </header>
   )
 }
+
+export default Header
