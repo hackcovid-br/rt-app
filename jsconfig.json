@@ -12,7 +12,8 @@
       "styles/*": ["./styles/*"],
       "utils/*": ["./utils/*"],
       "hooks/*": ["./hooks/*"],
-      "services/*": ["./services/*"]
+      "services/*": ["./services/*"],
+      "helpers/*": ["./helpers/*"],
     }
   },
   "include": ["./src"],
