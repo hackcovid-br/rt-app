@@ -7,7 +7,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-provide-react`,
     `gatsby-plugin-dynamic-routes`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {

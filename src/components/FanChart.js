@@ -1,29 +1,27 @@
-import React, {Component} from "react";
-import {Runtime, Inspector} from "@observablehq/runtime";
-import define from "@bbjacob123/fan-chart";
+import define from "@bbjacob123/fan-chart"
+import { Runtime, Inspector } from "@observablehq/runtime"
+import { useRef, useEffect } from "react"
 
-class FanChart extends Component {
-    chartRef = React.createRef();
+function FanChart({ uf }) {
+  const chartRef = useRef(null)
 
-    componentDidMount() {
-        const runtime = new Runtime();
+  useEffect(() => {
+    const runtime = new Runtime()
 
-        const main = runtime.module(define, name => {
-            if (name === "chart") {
-                return new Inspector(this.chartRef.current);
-            }
-        });
+    const main = runtime.module(define, name => {
+      if (name === "chart") {
+        return new Inspector(chartRef.current)
+      }
+    })
 
-        main.redefine("state", this.props.uf);
-    }
+    main.redefine("state", uf)
+  }, [])
 
-    render() {
-        return (
-            <div className="FanChart">
-                <div ref={this.chartRef}></div>
-            </div>
-        );
-    }
+  return (
+    <div className="FanChart">
+      <div ref={chartRef}></div>
+    </div>
+  )
 }
 
-export default FanChart;
+export default FanChart

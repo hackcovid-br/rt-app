@@ -1,33 +1,25 @@
-import React, {Component} from "react";
-import {Runtime, Inspector} from "@observablehq/runtime";
-import define from "@bbjacob123/rt-chart";
+import define from "@bbjacob123/rt-chart"
+import { Runtime, Inspector } from "@observablehq/runtime"
+import { useRef, useEffect } from "react"
 
-class BarChart extends Component {
-    chartRef = React.createRef();
+function BarChart() {
+  const chartRef = useRef(null)
 
-    componentDidMount() {
-        const runtime = new Runtime();
-        //runtime.module(define, Inspector.into(this.animationRef.current));
-        // runtime.module(define, name => {
-        //   if (name === "chart") {
-        //     return new Inspector.into(this.animationRef.current);
-        //   }
-        // })
-    
-        runtime.module(define, name => {
-          if (name === "chart") {
-            return new Inspector(this.chartRef.current);
-          }
-        });
+  useEffect(() => {
+    const runtime = new Runtime()
+
+    runtime.module(define, name => {
+      if (name === "chart") {
+        return new Inspector(chartRef.current)
       }
-    
-      render() {
-        return (
-          <div className="BarChart">
-            <div ref={this.chartRef}></div>
-          </div>
-        );
-      }
+    })
+  }, [])
+
+  return (
+    <div className="BarChart">
+      <div ref={chartRef}></div>
+    </div>
+  )
 }
 
-export default BarChart;
+export default BarChart
