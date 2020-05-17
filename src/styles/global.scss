@@ -1,0 +1,16 @@
+@import "./normalize";
+@import "./typography";
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+.default-layout {
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
