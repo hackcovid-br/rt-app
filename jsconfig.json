@@ -13,7 +13,7 @@
       "utils/*": ["./utils/*"],
       "hooks/*": ["./hooks/*"],
       "services/*": ["./services/*"],
-      "helpers/*": ["./helpers/*"],
+      "helpers/*": ["./helpers/*"]
     }
   },
   "include": ["./src"],

@@ -5,7 +5,8 @@ import BarChart from "components/BarChart.js"
 import FanChart from "components/FanChart.js"
 import Footer from "components/Footer"
 import Header from "components/Header"
-import MetaTags from './components/MetaTags'
+
+import MetaTags from "./components/MetaTags"
 
 function Home() {
   return (
