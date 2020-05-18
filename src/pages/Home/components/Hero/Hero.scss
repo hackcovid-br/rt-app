@@ -1,0 +1,37 @@
+.hero-container {
+  .rtcovid {
+    font-weight: 600;
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.2em !important;
+
+    @include below(500px) {
+      font-weight: 600;
+      font-size: 28px;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.2em !important;
+    }
+  }
+
+  .whatsRt {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+
+    @include below(500px) {
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .answerRt {
+    padding-right: 20%;
+    line-height: 180%;
+
+    @include below(500px) {
+      padding-right: 0;
+      line-height: 140%;
+    }
+  }
+}
