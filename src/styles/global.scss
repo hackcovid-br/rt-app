@@ -14,3 +14,12 @@ body,
 html {
   scroll-behavior: smooth;
 }
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include above($container-width) {
+    padding: 0 50px;
+  }
+}
