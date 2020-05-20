@@ -6,6 +6,7 @@
 
   > .data-description {
     font-weight: bold;
+    color: $foreground;
   }
 
   @include below(500px) {
