@@ -15,13 +15,10 @@
     "format": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
-    "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart.tgz?v=3",
-    "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart.tgz?v=3",
+    "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1242.tgz?v=3",
+    "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1464.tgz?v=3",
+    "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted@911.tgz?v=3",
     "@observablehq/runtime": "4",
-    "gh-pages": "^2.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
     "gatsby": "^2.21.21",
     "gatsby-alias-imports": "^1.0.4",
     "gatsby-env-variables": "^2.0.0",
@@ -31,7 +28,11 @@
     "gatsby-plugin-offline": "^3.2.1",
     "gatsby-plugin-provide-react": "^1.0.2",
     "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-sass": "^2.2.1"
+    "gatsby-plugin-sass": "^2.2.1",
+    "gh-pages": "^2.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
