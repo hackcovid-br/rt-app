@@ -41,7 +41,11 @@ function Footer() {
             outras pessoas mas não mostram nenhum sintoma. Esse modelo assume
             que a infecciosidade começa quando uma pessoa testa positivo e não
             quando ela é de fato infecciosa. Então é importante levar em
-            consideração que os valores do Rt podem estar alguns dias atrasados.
+            consideração que os valores do 
+            {" "}<em>
+              R<sub>t</sub>
+            </em>{" "}
+            podem estar alguns dias atrasados.
           </li>
         </ul>
       </div>
