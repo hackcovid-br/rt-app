@@ -34,7 +34,6 @@
 
 .answerRt {
   font-family: sans-serif;
-  padding-right: 20%;
   line-height: 180%;
 }
 
@@ -109,19 +108,7 @@
   }
   .answerRt {
     font-family: sans-serif;
-    padding-right: 0;
     line-height: 140%;
-  }
-  .barchartstyle {
-    transform: rotate(90deg);
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .node-text {
-    transform: rotate(-90deg);
-  }
-  .axis-label {
-    transform: rotate(-90deg);
   }
   .bodyPage {
     margin-top: 10px;
@@ -139,5 +126,10 @@
   .footertitle {
     font-weight: bold;
     font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .answerRt {
+    padding-right: 20%;
   }
 }

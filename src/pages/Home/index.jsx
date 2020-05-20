@@ -1,5 +1,6 @@
 import "./Home.scss"
-import statesOfBrazil from "helpers/statesOfBrazil.js"
+import statesOfBrazil from "helpers/statesOfBrazil.js";
+import { useEffect, useState } from 'react';
 
 import BarChart from "components/BarChart.js"
 import FanChart from "components/FanChart.js"
@@ -9,6 +10,26 @@ import Header from "components/Header"
 import MetaTags from "./components/MetaTags"
 
 function Home() {
+  const media = window.matchMedia('(max-width: 767px)');
+  const [state, setState] = useState({
+    isMobile: media.matches,
+  });
+
+  function handleResize() {
+    setState({
+      ...state,
+      isMobile: media.matches,
+    });
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   return (
     <div className="bodyPage">
       <MetaTags />
@@ -38,7 +59,7 @@ function Home() {
       <h3 className="States">Comparação entre estados</h3>
       <p className="latestWeek">Último Dia</p>
       <div className="barchartstyle">
-        <BarChart />
+        <BarChart inverted={state.isMobile} />
       </div>
       <ul className="allState">
         {statesOfBrazil.map((uniqueState, index) => (

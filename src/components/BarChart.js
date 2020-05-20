@@ -1,19 +1,22 @@
-import define from "@bbjacob123/rt-chart"
-import { Runtime, Inspector } from "@observablehq/runtime"
-import { useRef, useEffect } from "react"
+import defineHorizontal from "@bbjacob123/rt-chart";
+import defineVertical from "@bbjacob123/rt-chart-inverted";
+import { Runtime, Inspector } from "@observablehq/runtime";
+import { useRef, useEffect } from "react";
 
-function BarChart() {
+function BarChart({ inverted }) {
   const chartRef = useRef(null)
 
   useEffect(() => {
     const runtime = new Runtime()
+
+    const define = inverted ? defineVertical : defineHorizontal;
 
     runtime.module(define, name => {
       if (name === "chart") {
         return new Inspector(chartRef.current)
       }
     })
-  }, [])
+  }, [inverted])
 
   return (
     <div className="BarChart">
