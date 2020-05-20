@@ -26,7 +26,8 @@
   }
 
   .answerRt {
-    padding-right: 20%;
+    display: block;
+    max-width: 920px;
     line-height: 180%;
 
     @include below(500px) {
