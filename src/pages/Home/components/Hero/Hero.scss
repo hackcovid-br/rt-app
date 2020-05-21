@@ -29,6 +29,7 @@
     display: block;
     max-width: 920px;
     line-height: 180%;
+    color: $foreground;
 
     @include below(500px) {
       padding-right: 0;

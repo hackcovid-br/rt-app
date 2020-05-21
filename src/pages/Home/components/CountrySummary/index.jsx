@@ -1,7 +1,8 @@
+import "./CountrySummary.scss";
+import LastDate from './LastDate';
+import BarChart from "../BarChart"
 import { useEffect, useState } from "react";
 
-import "./CountrySummary.scss";
-import BarChart from "../BarChart";
 
 function CountrySummary() {
   const media = window.matchMedia('(max-width: 767px)');
@@ -27,7 +28,10 @@ function CountrySummary() {
   return (
     <div className="container country-summary-container">
       <h3 className="title">Comparação entre estados</h3>
-      <p className="data-description">Último Dia</p>
+      <p className="data-description">
+        Dados até:{' '}
+        <LastDate/>
+      </p>
       <div className="chart-wrapper">
         <BarChart inverted={state.isMobile} />
       </div>
