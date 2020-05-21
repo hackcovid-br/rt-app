@@ -1,23 +1,26 @@
 import "./CountrySummary.scss";
-import LastDate from './LastDate';
-import BarChart from "../BarChart"
 import { useEffect, useState } from "react";
+
+import LastDate from './LastDate';
+
+import BarChart from "../BarChart"
 
 
 function CountrySummary() {
-  const media = window.matchMedia('(max-width: 767px)');
-  const [state, setState] = useState({
-    isMobile: media.matches,
-  });
+  const [state, setState] = useState({});
 
   function handleResize() {
     setState({
       ...state,
-      isMobile: media.matches,
+      isMobile: window.matchMedia('(max-width: 767px)').matches,
     });
   }
 
   useEffect(() => {
+    setState({
+      ...state, 
+      isMobile: window.matchMedia('(max-width: 767px)').matches,
+    })
     window.addEventListener('resize', handleResize);
 
     return () => {
