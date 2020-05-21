@@ -15,8 +15,9 @@
     "format": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
-    "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart.tgz?v=3",
-    "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart.tgz?v=3",
+    "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1242.tgz?v=3",
+    "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1464.tgz?v=3",
+    "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted@911.tgz?v=3",
     "@observablehq/runtime": "4",
     "gatsby": "^2.21.21",
     "gatsby-alias-imports": "^1.0.4",
