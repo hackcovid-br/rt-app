@@ -10,7 +10,6 @@
 
   @include below(500px) {
     .chart-wrapper {
-      transform: rotate(90deg);
       margin-left: 15px;
       margin-right: 15px;
     }

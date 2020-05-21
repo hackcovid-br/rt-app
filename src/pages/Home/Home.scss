@@ -6,12 +6,3 @@
 .link:hover {
   text-decoration: underline;
 }
-
-@media (max-width: 500px) {
-  .node-text {
-    transform: rotate(-90deg);
-  }
-  .axis-label {
-    transform: rotate(-90deg);
-  }
-}

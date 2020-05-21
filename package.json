@@ -17,6 +17,7 @@
   "dependencies": {
     "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart.tgz?v=3",
     "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart.tgz?v=3",
+    "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted.tgz?v=3",
     "@observablehq/runtime": "4",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
