@@ -3,11 +3,16 @@ module.exports = {
     `gatsby-env-variables`,
     `gatsby-alias-imports`,
     `gatsby-optional-chaining`,
-    `gatsby-plugin-layout`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-provide-react`,
     `gatsby-plugin-dynamic-routes`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`${__dirname}/src/layouts/index.jsx`),
+      },
+    },
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
