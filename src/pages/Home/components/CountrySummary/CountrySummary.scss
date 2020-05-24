@@ -4,11 +4,6 @@
     font-size: 25px;
   }
 
-  > .data-description {
-    font-weight: bold;
-    color: $foreground;
-  }
-
   @include below(500px) {
     .chart-wrapper {
       margin-left: 15px;

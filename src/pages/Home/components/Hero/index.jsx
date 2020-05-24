@@ -1,5 +1,7 @@
 import "./Hero.scss"
 
+import LastDate from 'components/LastDate'
+
 function Hero() {
   return (
     <div className="container hero-container">
@@ -17,6 +19,10 @@ function Hero() {
 	Quando R<sub>t</sub> é maior que 1, a pandemia espalha para uma porção
         grande da população. Se o R<sub>t</sub> for menor que 1, a pandemia diminui rapidamente
         antes de infectar muita gente.
+      </p>
+      <p className="data-description">
+        Dados até:{' '}
+        <LastDate/>
       </p>
     </div>
   )
