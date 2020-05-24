@@ -2,8 +2,9 @@ module.exports = {
   plugins: [
     `gatsby-env-variables`,
     `gatsby-alias-imports`,
-    `gatsby-plugin-offline`,
     `gatsby-optional-chaining`,
+    `gatsby-plugin-layout`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-provide-react`,
     `gatsby-plugin-dynamic-routes`,
