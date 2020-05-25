@@ -41,3 +41,18 @@
   font-weight: bold;
   color: $foreground;
 } 
+
+.info {
+  font-family: serif;
+  font-weight: bold;
+  color: white;
+  background-color: #9900013d;
+  margin: 0;
+  border: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 15px;
+  cursor: help;
+  margin-left: 5px;
+  font-size: 16px;
+}

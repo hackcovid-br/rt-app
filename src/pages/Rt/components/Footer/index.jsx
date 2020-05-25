@@ -1,8 +1,19 @@
-import "./Footer.scss"
-
+import "./Footer.scss";
 import Container from "containers/Container";
+import { useRef, useEffect } from "react";
 
-function Footer() {
+
+function Footer({ rtState, rtSetState }) {
+  const apiLinkRef = useRef(null);
+
+  useEffect(() => {
+    rtSetState({
+      ...rtState,
+      apiLinkRef
+    });
+  }, [])
+
+
   return (
     <div className="footer-container">
       <Container>
@@ -22,7 +33,7 @@ function Footer() {
             </em>
             .
           </li>
-          <li className="footer-description-item">
+          <li ref={apiLinkRef} className="footer-description-item">
             <a className="link" href="https://github.com/wcota/covid19br">
               API
             </a>{" "}

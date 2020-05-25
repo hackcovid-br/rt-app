@@ -1,7 +1,22 @@
 import "./Hero.scss"
 import LastDate from 'components/LastDate'
 
-export default function Hero() {
+export default function Hero({ apiLinkRef }) {
+
+  function handleClickInfo (e) {
+    const ref = apiLinkRef.current;
+    e.preventDefault();
+    ref.scrollIntoView({ behavior: "smooth" });
+    ref.style.transformOrigin = `left center`;
+    ref.style.transition = `transform .4s ease-in-out .4s`;
+    ref.style.transform = `scale(1.15)`;
+  
+    const timeout = setTimeout(() => {
+      ref.style.transform = `scale(1)`;
+      clearTimeout(timeout);
+    }, 800);
+  }
+
   return (
     <section className="hero">
       <h1 className="rtcovid">
@@ -22,6 +37,11 @@ export default function Hero() {
       <p className="data-description">
         Dados até:{' '}
         <LastDate/>
+        <button className="info"
+                title="Mais informações" 
+                onClick={handleClickInfo}>
+          i
+        </button>
       </p>
     </section>
   )
