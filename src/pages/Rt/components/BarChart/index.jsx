@@ -7,6 +7,10 @@ function BarChart({ inverted }) {
   const chartRef = useRef(null)
 
   useEffect(() => {
+    if (inverted === undefined) {
+      return;
+    }
+    
     const runtime = new Runtime()
 
     const define = inverted ? defineVertical : defineHorizontal;
