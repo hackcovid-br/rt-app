@@ -7,14 +7,14 @@ export default function Hero({ apiLinkRef }) {
     const ref = apiLinkRef.current;
     e.preventDefault();
     ref.scrollIntoView({ behavior: "smooth" });
-    ref.style.transformOrigin = `left center`;
-    ref.style.transition = `transform .4s ease-in-out .4s`;
-    ref.style.transform = `scale(1.15)`;
+    ref.style.transformOrigin = `center center`;
+    ref.style.transition = `box-shadow .2s ease-in-out .4s`;
+    ref.style.boxShadow = `0px 0px 1px 2px #9900015c`;
   
     const timeout = setTimeout(() => {
-      ref.style.transform = `scale(1)`;
+      ref.style.boxShadow = `none`;
       clearTimeout(timeout);
-    }, 800);
+    }, 700);
   }
 
   return (
