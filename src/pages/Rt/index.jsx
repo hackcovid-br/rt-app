@@ -8,7 +8,7 @@ import Hero from "./components/Hero"
 import MetaTags from "./components/MetaTags"
 import StatesSummary from "./components/StatesSummary"
 
-export default function Home() {
+export default function Rt() {
   return (
     <div className="home-page-container">
       <MetaTags />
