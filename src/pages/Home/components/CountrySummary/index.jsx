@@ -27,8 +27,7 @@ function CountrySummary() {
   }, []);
 
   return (
-    <div className="container country-summary-container">
-      <h3 className="title">Comparação entre estados</h3>
+    <div className="country-summary-container">
       <h4>
         R<sub>t</sub> mais recente por estado
       </h4>

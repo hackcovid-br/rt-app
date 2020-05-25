@@ -4,7 +4,8 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   padding-left: 0;
-  padding-bottom: 20px;
+  padding-bottom: 38px;
+  margin: 0;
 
   @include below(1250px) {
     grid-template-columns: repeat(4, 1fr);

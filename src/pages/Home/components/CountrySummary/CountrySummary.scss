@@ -1,13 +1,8 @@
 .country-summary-container {
-  > .title {
-    font-weight: bold;
-    font-size: 25px;
-  }
-
-  @include below(500px) {
+  @include above(501px) {
     .chart-wrapper {
-      margin-left: 15px;
-      margin-right: 15px;
+      margin-left: -28px;
     }
   }
 }
+

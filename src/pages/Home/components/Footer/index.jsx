@@ -1,9 +1,11 @@
 import "./Footer.scss"
 
+import Container from "containers/Container";
+
 function Footer() {
   return (
     <div className="footer-container">
-      <div className="container">
+      <Container>
         <h3 className="footer-title">Recursos</h3>
         <ul className="footer-description-list">
           <li className="footer-description-item">
@@ -48,7 +50,7 @@ function Footer() {
             podem estar alguns dias atrasados.
           </li>
         </ul>
-      </div>
+      </Container>
     </div>
   )
 }

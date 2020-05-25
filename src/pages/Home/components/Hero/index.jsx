@@ -1,10 +1,9 @@
 import "./Hero.scss"
-
 import LastDate from 'components/LastDate'
 
-function Hero() {
+export default function Hero() {
   return (
-    <div className="container hero-container">
+    <section className="hero">
       <h1 className="rtcovid">
         R<sub>t</sub> Covid-19
       </h1>
@@ -24,7 +23,6 @@ function Hero() {
         Dados até:{' '}
         <LastDate/>
       </p>
-    </div>
+    </section>
   )
 }
-export default Hero

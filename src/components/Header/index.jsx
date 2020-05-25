@@ -1,10 +1,13 @@
 import "./Header.scss"
 
+import Container from "containers/Container";
+
+
 function Header() {
   return (
-    <header className="container">
+    <Container tagName="header">
       <img className="logohc" src="/images/logo_HC.png" alt="HackCovid19" />
-    </header>
+    </Container>
   )
 }
 
