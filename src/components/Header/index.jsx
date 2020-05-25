@@ -1,7 +1,8 @@
 import "./Header.scss"
 
+import Navbar from "components/Navbar";
 import Container from "containers/Container";
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 
 function Header() {
@@ -24,15 +25,7 @@ function Header() {
     render={ data => (
       <Container tagName="header">
         <img className="logohc" src="/images/logo_HC.png" alt={data.site.siteMetadata.title} />
-        <ul>
-          {data.site.siteMetadata.menuLinks.map(item => (
-            <li key={item.link}>
-              <Link to={item.link}>
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Navbar navItems={data.site.siteMetadata.menuLinks} />
       </Container>
     )} 
   />

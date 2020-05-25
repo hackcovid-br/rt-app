@@ -10,7 +10,7 @@ import StatesSummary from "./components/StatesSummary"
 
 export default function Rt() {
   const [state , setState] = useState({});
-
+  
   return (
     <div className="home-page-container">
       <MetaTags />
