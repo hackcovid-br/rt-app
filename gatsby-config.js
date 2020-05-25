@@ -1,4 +1,15 @@
 module.exports = {
+  siteMetadata: {
+    title: `HackCovid`,
+    siteUrl: `https://hackcovid.com.br`,
+    description: `HackCovid é um projeto social que tem como objetivo auxiliar na diminuição do impacto do covid-19.`,
+    menuLinks: [
+      {
+        name: 'Rt',
+        link: '/'
+      },
+    ]
+  },
   plugins: [
     `gatsby-env-variables`,
     `gatsby-alias-imports`,
