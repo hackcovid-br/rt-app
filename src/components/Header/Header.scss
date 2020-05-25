@@ -1,8 +1,13 @@
-.logohc {
-  padding-top: 50px;
-  height: 100px;
+.header {
+  background-color: $bg_header;
+}
 
-  @include below(500px) {
-    height: 80px;
-  }
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  @include headerItemSpacing
 }

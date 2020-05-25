@@ -1,0 +1,15 @@
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar__item {
+  display: block;
+  text-decoration: none;
+  color: $fg_navbar;
+  font-size: 18px;
+  font-weight: 400;
+  @include headerItemSpacing
+}

@@ -2,10 +2,29 @@ import "./Header.scss"
 
 import Navbar from "components/Navbar";
 import Container from "containers/Container";
-import { StaticQuery, graphql } from 'gatsby';
-
+import { Link, StaticQuery, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 function Header() {
+
+  function handleRender (data) {
+    const siteMetadata = data.site.siteMetadata;
+    return (
+      <header className="header">
+        <Container className="header__container">
+          <Helmet>
+            <title>{ siteMetadata.title }</title>
+            <meta name="description" content={siteMetadata.description} />
+          </Helmet>
+          <Link to="/">
+            <img className="logo" src="/images/header_logo.png" alt={siteMetadata.title} />
+          </Link>
+          <Navbar navItems={siteMetadata.menuLinks} />
+        </Container>
+      </header>
+    )
+  }
+
   return (
     <StaticQuery query={
       graphql`
@@ -13,6 +32,7 @@ function Header() {
           site {
             siteMetadata  {
               title
+              description
               menuLinks {
                 name
                 link
@@ -22,12 +42,7 @@ function Header() {
         }
       `
     }
-    render={ data => (
-      <Container tagName="header">
-        <img className="logohc" src="/images/logo_HC.png" alt={data.site.siteMetadata.title} />
-        <Navbar navItems={data.site.siteMetadata.menuLinks} />
-      </Container>
-    )} 
+    render={ handleRender }
   />
     
   )

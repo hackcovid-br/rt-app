@@ -9,7 +9,7 @@ export default function Navbar ({ navItems }) {
       {navItems.map(item => (
         <li key={item.link}>
           <Link to={item.link} 
-            className={`nav-item`}
+            className={`navbar__item`}
           >
             {item.name}
           </Link>
