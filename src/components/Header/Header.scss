@@ -1,0 +1,13 @@
+.header {
+  background-color: $bg_header;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  @include headerItemSpacing
+}

@@ -1,8 +1,24 @@
 import "./Hero.scss"
+import LastDate from 'components/LastDate'
 
-function Hero() {
+export default function Hero({ apiLinkRef }) {
+
+  function handleClickInfo (e) {
+    const ref = apiLinkRef.current;
+    e.preventDefault();
+    ref.scrollIntoView({ behavior: "smooth" });
+    ref.style.transformOrigin = `center center`;
+    ref.style.transition = `box-shadow .2s ease-in-out .4s`;
+    ref.style.boxShadow = `0px 0px 1px 2px #9900015c`;
+  
+    const timeout = setTimeout(() => {
+      ref.style.boxShadow = `none`;
+      clearTimeout(timeout);
+    }, 700);
+  }
+
   return (
-    <div className="container hero-container">
+    <section className="hero">
       <h1 className="rtcovid">
         R<sub>t</sub> Covid-19
       </h1>
@@ -18,7 +34,15 @@ function Hero() {
         grande da população. Se o R<sub>t</sub> for menor que 1, a pandemia diminui rapidamente
         antes de infectar muita gente.
       </p>
-    </div>
+      <p className="data-description">
+        Dados até:{' '}
+        <LastDate/>
+        <button className="info"
+                title="Mais informações" 
+                onClick={handleClickInfo}>
+          i
+        </button>
+      </p>
+    </section>
   )
 }
-export default Hero

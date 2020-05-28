@@ -1,0 +1,59 @@
+.rtcovid {
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.2em !important;
+
+  @include below(500px) {
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.2em !important;
+  }
+}
+
+.whatsRt {
+  font-weight: bolder;
+  font-size: 30px;
+
+  @include below(500px) {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.answerRt {
+  font-family: sans-serif;
+  font-size: 14px;
+  display: block;
+  max-width: 920px;
+  line-height: 180%;
+  color: $foreground;
+
+  @include below(500px) {
+    padding-right: 0;
+    line-height: 140%;
+  }
+}
+
+.data-description {
+  font-weight: bold;
+  color: $foreground;
+} 
+
+.info {
+  font-family: serif;
+  font-weight: bold;
+  color: white;
+  background-color: #9900013d;
+  margin: 0;
+  border: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 15px;
+  cursor: help;
+  margin-left: 5px;
+  font-size: 14px;
+  padding: 0;
+}

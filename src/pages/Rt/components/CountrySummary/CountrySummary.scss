@@ -1,0 +1,8 @@
+.country-summary-container {
+  @include above(501px) {
+    .chart-wrapper {
+      margin-left: -28px;
+    }
+  }
+}
+

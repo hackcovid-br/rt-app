@@ -3,7 +3,9 @@
   list-style: none;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
-  padding-bottom: 20px;
+  padding-left: 0;
+  padding-bottom: 38px;
+  margin: 0;
 
   @include below(1250px) {
     grid-template-columns: repeat(4, 1fr);
