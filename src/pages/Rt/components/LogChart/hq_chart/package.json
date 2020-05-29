@@ -1,0 +1,14 @@
+{
+  "name": "@lucasrla/covid-19-casos-e-mortes-no-brasil",
+  "main": "b430eafc3117c971@629.js",
+  "version": "629.0.0",
+  "homepage": "https://observablehq.com/@lucasrla/covid-19-casos-e-mortes-no-brasil",
+  "author": {
+    "name": "lucasrla",
+    "url": "https://observablehq.com/@lucasrla"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
