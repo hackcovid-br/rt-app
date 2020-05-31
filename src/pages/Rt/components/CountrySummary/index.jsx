@@ -1,30 +1,29 @@
-import "./CountrySummary.scss";
-import { useEffect, useState } from "react";
+import "./CountrySummary.scss"
+import { useEffect, useState } from "react"
 
 import BarChart from "../BarChart"
 
-
 function CountrySummary() {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({})
 
   function handleResize() {
     setState({
       ...state,
-      isMobile: window.matchMedia('(max-width: 767px)').matches,
-    });
+      isMobile: window.matchMedia("(max-width: 767px)").matches,
+    })
   }
 
   useEffect(() => {
     setState({
-      ...state, 
-      isMobile: window.matchMedia('(max-width: 767px)').matches,
+      ...state,
+      isMobile: window.matchMedia("(max-width: 767px)").matches,
     })
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize)
     }
-  }, []);
+  }, [])
 
   return (
     <div className="country-summary-container">

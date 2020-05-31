@@ -1,25 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `HackCovid`,
-    siteUrl: `https://hackcovid.com.br`,
-    description: `
-      HackCovid é um projeto social que tem como objetivo auxiliar na diminuição do impacto do covid-19.
-    `,
-    menuLinks: [
-      // {
-      //   name: 'Home',
-      //   link: '/home'
-      // },
-      {
-        name: 'Rt',
-        link: '/'
-      },
-      // {
-      //   name: 'Sobre',
-      //   link: '/sobre'
-      // },
-    ]
-  },
   plugins: [
     `gatsby-env-variables`,
     `gatsby-alias-imports`,
@@ -28,12 +7,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-provide-react`,
     `gatsby-plugin-dynamic-routes`,
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`${__dirname}/src/layouts/index.jsx`),
-      },
-    },
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {

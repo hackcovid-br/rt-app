@@ -11,5 +11,5 @@
   color: $fg_navbar;
   font-size: 18px;
   font-weight: 400;
-  @include headerItemSpacing
+  @include headerItemSpacing;
 }

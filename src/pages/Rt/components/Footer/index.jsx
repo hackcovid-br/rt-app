@@ -1,19 +1,7 @@
-import "./Footer.scss";
-import Container from "containers/Container";
-import { useRef, useEffect } from "react";
+import "./Footer.scss"
+import Container from "containers/Container"
 
-
-function Footer({ rtState, rtSetState }) {
-  const apiLinkRef = useRef(null);
-
-  useEffect(() => {
-    rtSetState({
-      ...rtState,
-      apiLinkRef
-    });
-  }, [])
-
-
+function Footer({ apiLinkRef }) {
   return (
     <div className="footer-container">
       <Container>
@@ -54,8 +42,8 @@ function Footer({ rtState, rtSetState }) {
             outras pessoas mas não mostram nenhum sintoma. Esse modelo assume
             que a infecciosidade começa quando uma pessoa testa positivo e não
             quando ela é de fato infecciosa. Então é importante levar em
-            consideração que os valores do 
-            {" "}<em>
+            consideração que os valores do{" "}
+            <em>
               R<sub>t</sub>
             </em>{" "}
             podem estar alguns dias atrasados.
