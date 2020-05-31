@@ -15,16 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
-h3 {
-  font-weight: bold;
-  font-size: 25px;
-  margin: 30px 0;
-}
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
 
-h4 {
-  font-size: 30px;
-  font-weight: 300;
-  margin: 20px 0;
+  @include above($mobile-cutoff) {
+    padding: 0 28px;
+  }
 }
 
 .padding-indent {
