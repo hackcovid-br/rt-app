@@ -18,9 +18,10 @@ html {
 .container {
   max-width: $container-width;
   margin: 0 auto;
+  padding: 0 40px;
 
-  @include above($mobile-cutoff) {
-    padding: 0 28px;
+  @include below($mobile-cutoff) {
+    padding: 0 20px;
   }
 }
 

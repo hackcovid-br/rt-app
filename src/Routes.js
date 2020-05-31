@@ -1,6 +1,10 @@
 module.exports = {
-  rt: {
+  home: {
     path: "/",
+    component: "src/pages/Home/index.jsx",
+  },
+  rt: {
+    path: "/rt",
     component: "src/pages/Rt/index.jsx",
   },
   about: {
