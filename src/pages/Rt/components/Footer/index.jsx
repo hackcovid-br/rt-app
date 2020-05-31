@@ -1,10 +1,9 @@
 import "./Footer.scss"
-import Container from "containers/Container"
 
 function Footer({ apiLinkRef }) {
   return (
     <div className="footer-container">
-      <Container>
+      <div className="container">
         <h3 className="footer-title">Recursos</h3>
         <ul className="footer-description-list">
           <li className="footer-description-item">
@@ -49,7 +48,7 @@ function Footer({ apiLinkRef }) {
             podem estar alguns dias atrasados.
           </li>
         </ul>
-      </Container>
+      </div>
     </div>
   )
 }

@@ -1,6 +1,17 @@
 .footer-container {
   background-color: #f7f6f3;
   padding: 20px 0;
+
+  .container {
+    max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include above(501px) {
+      width: 92%;
+      padding: 0 28px;
+    }
+  }
+
   .footer-title {
     font-weight: bold;
     font-size: 18px;
