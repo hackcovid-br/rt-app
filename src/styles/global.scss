@@ -16,7 +16,7 @@ html {
 }
 
 .container {
-  max-width: $containerWidth;
+  max-width: $container-width;
   margin: 0 auto;
 
   @include above($mobile-cutoff) {
