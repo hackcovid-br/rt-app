@@ -1,12 +1,17 @@
 .hero-container {
   height: calc(100vh - 56px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-height: 940px;
   min-height: 500px;
+  border-bottom: 1px solid $grey-primary;
   @include below(500px) {
     height: calc(100vh - 26px);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
 
   .hero-title {
@@ -16,7 +21,7 @@
     line-height: 110px;
     color: $text-color;
     max-width: 994px;
-    margin-top: 0;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10vh;
