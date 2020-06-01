@@ -59,10 +59,12 @@
     @include below(1000px) {
       font-size: 40px;
       margin-top: 80px;
+      padding: 18px 80px;
     }
     @include below(760px) {
-      font-size: 27px;
+      font-size: 20px;
       margin-top: 50px;
+      padding: 16px 50px;
     }
   }
 }
