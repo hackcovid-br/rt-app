@@ -6,7 +6,7 @@ export default function Navbar() {
   const navItems = [
     {
       name: "Rt",
-      link: "/",
+      link: "/rt",
     },
   ]
 
