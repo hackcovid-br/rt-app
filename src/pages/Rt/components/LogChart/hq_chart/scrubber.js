@@ -1,5 +1,5 @@
 // https://observablehq.com/@mbostock/scrubber@201
-import define1 from "./4caee69e966109c8@32.js"
+import define1 from "./disposal.js"
 
 export default function define(runtime, observer) {
   const main = runtime.module()
