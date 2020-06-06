@@ -5,12 +5,17 @@ import Hero from "./components/Hero"
 import Apply from "./components/Apply"
 import TalkWithUs from "./components/TalkWithUs"
 import Footer from "./components/Footer"
-import BrHeatChart from "pages/Rt/components/BrHeatChart/BrHeatChart"
 
 function Home() {
   return (
     <Layout>
-      <BrHeatChart></BrHeatChart>
+      <Hero />
+
+      <Apply />
+
+      <TalkWithUs />
+
+      <Footer />
     </Layout>
   )
 }
