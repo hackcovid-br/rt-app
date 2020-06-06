@@ -1,21 +1,20 @@
 // https://observablehq.com/@lucasrla/covid-19-casos-e-mortes-no-brasil@629
 import define3 from "./a33468b95d0b15b0@692.js"
 import define2 from "./e93997d5089d7165@2264.js"
-import define1 from "./f4098a3a05f706f0@329.js"
 
 export default function define(runtime, observer) {
   const main = runtime.module()
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 # COVID-19 Casos e Mortes no Brasil`
   })
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 ## Evolução por Estado`
   })
   main
     .variable(observer("viewof y_type"))
-    .define("viewof y_type", ["radio"], function(radio) {
+    .define("viewof y_type", ["radio"], function (radio) {
       return radio({
         title: "Exibir:",
         options: [
@@ -30,7 +29,7 @@ export default function define(runtime, observer) {
     .define("y_type", ["Generators", "viewof y_type"], (G, _) => G.input(_))
   main
     .variable(observer("viewof pivot_n"))
-    .define("viewof pivot_n", ["slider", "pivot_values"], function(
+    .define("viewof pivot_n", ["slider", "pivot_values"], function (
       slider,
       pivot_values
     ) {
@@ -49,7 +48,7 @@ export default function define(runtime, observer) {
     .define("pivot_n", ["Generators", "viewof pivot_n"], (G, _) => G.input(_))
   main
     .variable(observer("viewof num_days"))
-    .define("viewof num_days", ["slider"], function(slider) {
+    .define("viewof num_days", ["slider"], function (slider) {
       return slider({
         title: "Período de tempo a ser considerado:",
         min: 20,
@@ -65,7 +64,7 @@ export default function define(runtime, observer) {
     .define("num_days", ["Generators", "viewof num_days"], (G, _) => G.input(_))
   main
     .variable(observer("viewof doubling_periods"))
-    .define("viewof doubling_periods", ["checkbox"], function(checkbox) {
+    .define("viewof doubling_periods", ["checkbox"], function (checkbox) {
       return checkbox({
         title: "Retas pontilhadas (guias):",
         options: [
@@ -90,7 +89,7 @@ export default function define(runtime, observer) {
     )
   main
     .variable(observer("viewof selected_regions"))
-    .define("viewof selected_regions", ["checkbox"], function(checkbox) {
+    .define("viewof selected_regions", ["checkbox"], function (checkbox) {
       return checkbox({
         title: "Regiões:",
         options: ["N", "NE", "CO", "SE", "S"],
@@ -106,7 +105,7 @@ export default function define(runtime, observer) {
     )
   main
     .variable(observer("swatch"))
-    .define("swatch", ["swatches", "color"], function(swatches, color) {
+    .define("swatch", ["swatches", "color"], function (swatches, color) {
       return swatches({
         color: color,
       })
@@ -116,7 +115,7 @@ export default function define(runtime, observer) {
     .define(
       "chart",
       ["d3", "params", "draw_axes", "draw_doubling_lines", "draw_trajectories"],
-      function(d3, params, draw_axes, draw_doubling_lines, draw_trajectories) {
+      function (d3, params, draw_axes, draw_doubling_lines, draw_trajectories) {
         const svg = d3
           .create("svg")
           .attr("viewBox", [0, 0, params.width, params.height])
@@ -131,7 +130,7 @@ export default function define(runtime, observer) {
     )
   main
     .variable(observer("onMouseOver"))
-    .define("onMouseOver", ["d3", "code_to_name", "x", "params", "y"], function(
+    .define("onMouseOver", ["d3", "code_to_name", "x", "params", "y"], function (
       d3,
       code_to_name,
       x,
@@ -164,7 +163,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("onMouseOut"))
-    .define("onMouseOut", ["d3", "params"], function(d3, params) {
+    .define("onMouseOut", ["d3", "params"], function (d3, params) {
       return function onMouseOut() {
         const code = d3.select(this).attr("class")
         d3.selectAll(`.${code}`)
@@ -178,7 +177,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("draw_axes"))
-    .define("draw_axes", ["xAxis", "yAxis"], function(xAxis, yAxis) {
+    .define("draw_axes", ["xAxis", "yAxis"], function (xAxis, yAxis) {
       return function draw_axes(svg) {
         svg.append("g").call(xAxis)
         svg.append("g").call(yAxis)
@@ -199,7 +198,7 @@ export default function define(runtime, observer) {
         "y",
         "d3",
       ],
-      function(
+      function (
         viz_data,
         color,
         params,
@@ -271,7 +270,7 @@ export default function define(runtime, observer) {
         "doubling_period_labels",
         "get_text_rotation_angle",
       ],
-      function(
+      function (
         doubling_periods,
         d3,
         x,
@@ -329,11 +328,11 @@ export default function define(runtime, observer) {
     )
   main
     .variable(observer("doubling_period_labels"))
-    .define("doubling_period_labels", ["doubling_periods", "params"], function(
+    .define("doubling_period_labels", ["doubling_periods", "params"], function (
       doubling_periods,
       params
     ) {
-      return doubling_periods.map(function(d) {
+      return doubling_periods.map(function (d) {
         d = Number(d)
         const candidate_n = params.xmax / d
         const candidate_y = Math.pow(2, candidate_n) * params.ymin
@@ -350,23 +349,23 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("get_path"))
-    .define("get_path", ["d3", "x", "y"], function(d3, x, y) {
+    .define("get_path", ["d3", "x", "y"], function (d3, x, y) {
       return function get_path(d) {
         const l = d3.line()
         return l(
-          d.map(function(e, i) {
+          d.map(function (e, i) {
             return [x(i), y(e)]
           })
         )
       }
     })
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 ## Visualization parameters`
   })
   main
     .variable(observer("color"))
-    .define("color", ["d3", "data"], function(d3, data) {
+    .define("color", ["d3", "data"], function (d3, data) {
       return d3
         .scaleOrdinal(
           data.map(d => d.region),
@@ -376,7 +375,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("params"))
-    .define("params", ["pivot", "num_days"], function(pivot, num_days) {
+    .define("params", ["pivot", "num_days"], function (pivot, num_days) {
       return {
         width: 600,
         height: 400,
@@ -388,13 +387,13 @@ export default function define(runtime, observer) {
         opac_weak: 0.6,
       }
     })
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 ## Basic visualization elements`
   })
   main
     .variable(observer("yAxis"))
-    .define("yAxis", ["params", "d3", "y", "y_type"], function(
+    .define("yAxis", ["params", "d3", "y", "y_type"], function (
       params,
       d3,
       y,
@@ -417,7 +416,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("y"))
-    .define("y", ["d3", "params"], function(d3, params) {
+    .define("y", ["d3", "params"], function (d3, params) {
       return d3.scaleLog(
         [params.ymin, params.ymax],
         [params.height - params.margin.bottom, params.margin.top]
@@ -425,7 +424,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("xAxis"))
-    .define("xAxis", ["params", "d3", "x", "width"], function(
+    .define("xAxis", ["params", "d3", "x", "width"], function (
       params,
       d3,
       x,
@@ -451,19 +450,19 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("x"))
-    .define("x", ["d3", "params"], function(d3, params) {
+    .define("x", ["d3", "params"], function (d3, params) {
       return d3
         .scaleLinear()
         .domain([params.xmin, params.xmax])
         .range([params.margin.left, params.width - params.margin.right])
     })
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 ## Data helpers`
   })
   main
     .variable(observer("get_text_rotation_angle"))
-    .define("get_text_rotation_angle", ["y", "params", "x"], function(
+    .define("get_text_rotation_angle", ["y", "params", "x"], function (
       y,
       params,
       x
@@ -479,7 +478,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("code_to_name"))
-    .define("code_to_name", ["data"], function(data) {
+    .define("code_to_name", ["data"], function (data) {
       return function code_to_name(state_code) {
         return data.find(d => d.state_code === state_code).state_name
       }
@@ -489,14 +488,14 @@ export default function define(runtime, observer) {
     .define(
       "viz_data",
       ["data", "selected_regions", "y_type", "pivot", "pivot_bisector"],
-      function(data, selected_regions, y_type, pivot, pivot_bisector) {
+      function (data, selected_regions, y_type, pivot, pivot_bisector) {
         return data
           .filter(d => selected_regions.includes(d.region))
           .filter(d => {
             const last_index = d[y_type].length - 1
             return d[y_type][last_index][1] > pivot
           })
-          .map(function(d) {
+          .map(function (d) {
             const start_idx = pivot_bisector.right(d[y_type], pivot)
 
             d["shifted"] = d[y_type].slice(start_idx).map(d => d[1])
@@ -506,22 +505,22 @@ export default function define(runtime, observer) {
     )
   main
     .variable(observer("pivot_bisector"))
-    .define("pivot_bisector", ["d3"], function(d3) {
+    .define("pivot_bisector", ["d3"], function (d3) {
       return d3.bisector(d => d[1])
     })
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 ## Data`
   })
   main
     .variable(observer("pivot"))
-    .define("pivot", ["pivot_values", "pivot_n"], function(
+    .define("pivot", ["pivot_values", "pivot_n"], function (
       pivot_values,
       pivot_n
     ) {
       return pivot_values[pivot_n]
     })
-  main.variable(observer("pivot_values")).define("pivot_values", function() {
+  main.variable(observer("pivot_values")).define("pivot_values", function () {
     return [
       1,
       5,
@@ -543,8 +542,8 @@ export default function define(runtime, observer) {
   })
   main
     .variable(observer("data"))
-    .define("data", ["data_raw", "past_week"], function(data_raw, past_week) {
-      return data_raw.map(function(d) {
+    .define("data", ["data_raw", "past_week"], function (data_raw, past_week) {
+      return data_raw.map(function (d) {
         d.confirmed_fraction = d.confirmed.map(x => [x[0], x[1] / d.population])
         d.confirmed_lastweek = past_week(d.confirmed)
         d.deaths_lastweek = past_week(d.deaths)
@@ -553,7 +552,7 @@ export default function define(runtime, observer) {
     })
   main
     .variable(observer("past_week"))
-    .define("past_week", ["d3"], function(d3) {
+    .define("past_week", ["d3"], function (d3) {
       return function past_week(a) {
         var new_array = [[a[0][0], a[0][1]]]
         var curr_sum = 0
@@ -570,19 +569,43 @@ export default function define(runtime, observer) {
         return new_array
       }
     })
-  main.variable(observer("data_raw")).define("data_raw", ["d3"], function(d3) {
+  main.variable(observer("data_raw")).define("data_raw", ["d3"], function (d3) {
     return d3.json(
-      "https://raw.githubusercontent.com/lucasrla/covid-19-brasil/master/state_summary.json"
+      "https://hackcovid.s3-us-west-2.amazonaws.com/data/data_new_cases.json"
     )
   })
-  main.variable(observer()).define(["md"], function(md) {
+  main.variable(observer()).define(["md"], function (md) {
     return md`
 ## Import`
   })
-  const child1 = runtime.module(define1)
-  main.import("add_past_week_number", child1)
-  const child2 = runtime.module(define1)
-  main.import("ts_diff", child2)
+  main
+    .variable(observer("add_past_week_number"))
+    .define("add_past_week_number", ["d3"], function (d3) {
+      return function add_past_week_number(a) {
+        var new_array = [[a[0][0], a[0][1], a[0][1]]]
+        var curr_sum = 0
+        var min_idx = 0
+        for (var i = 1; i < a.length; i++) {
+          min_idx = d3.max([0, i - 7])
+          if (min_idx != 0) {
+            curr_sum = a[i][1] - a[min_idx][1]
+          } else {
+            curr_sum = a[i][1]
+          }
+          new_array.push([a[i][0], a[i][1], curr_sum])
+        }
+        return new_array
+      }
+    })
+  main.variable(observer("ts_diff")).define("ts_diff", function () {
+    return function ts_diff(a) {
+      var new_array = []
+      new_array.push([a[0][0], a[0][1]])
+      for (var i = 1; i < a.length; i++)
+        new_array.push([a[i][0], a[i][1] - a[i - 1][1]])
+      return new_array
+    }
+  });
   const child3 = runtime.module(define2)
   main.import("checkbox", child3)
   const child4 = runtime.module(define3)
@@ -591,7 +614,7 @@ export default function define(runtime, observer) {
   main.import("radio", child5)
   const child6 = runtime.module(define2)
   main.import("slider", child6)
-  main.variable(observer("d3")).define("d3", ["require"], function(require) {
+  main.variable(observer("d3")).define("d3", ["require"], function (require) {
     return require.alias({
       d3: "d3@5",
       "d3-regression": "d3-regression@1",
