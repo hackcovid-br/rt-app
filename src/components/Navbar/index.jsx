@@ -47,7 +47,9 @@ export default function Navbar() {
 
   return (
     <>
-      { isMobile && <ButtonToggleNavbar state={state} toggleSidebar={toggleSidebar} /> }
+      { isMobile && <ButtonToggleNavbar 
+        isVisible={state.showSidebar} 
+        toggleSidebar={toggleSidebar} /> }
 
       <ul className="navbar" 
         style={ isMobile && !state.showSidebar 
