@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useState } from 'react'
 import { FiMenu, FiX } from "react-icons/fi"
 
-import { useMaxWidth } from 'hooks';
+import { useMaxWidth } from 'hooks'
 
 
 
@@ -37,19 +37,23 @@ export default function Navbar() {
   
   const navItems = [
     {
+      name: "Home",
+      link: "/",
+    },{
       name: "Rt",
       link: "/rt",
     },
   ];
 
-  let classNameString = 'navbar';
-  state.showSidebar && (classNameString += ' visible');
-
   return (
     <>
       { isMobile && <ButtonToggleNavbar state={state} toggleSidebar={toggleSidebar} /> }
 
-      <ul className={classNameString}>
+      <ul className="navbar" 
+        style={ isMobile && !state.showSidebar 
+          ? {transform: 'translateX(100%)'} 
+          : {transform: 'translateX(0)'}} 
+      >
         {navItems.map(item => (
           <li key={item.link}>
             <Link to={item.link} className={`navbar__item`} onClick={toggleSidebar}>
