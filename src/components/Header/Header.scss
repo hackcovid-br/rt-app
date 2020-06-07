@@ -11,3 +11,7 @@
 .logo {
   @include headerItemSpacing;
 }
+
+.logo__link {
+  margin: 0 auto;
+}
