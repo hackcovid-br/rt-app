@@ -5,6 +5,29 @@
   display: flex;
 }
 
+.mobile-layout .navbar {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 65vw;
+  max-width: 300px;
+  background-color: #545454;
+  height: calc(100vh - 55px);
+  overflow-y: auto;
+  z-index: 1;
+  transform: translateX(100%);
+  transition: transform .2s ease-in-out;
+
+  &.visible {
+    transform: translateX(0);
+  }
+
+  > li {
+    padding: 10px;
+  }
+}
+
 .navbar__item {
   display: block;
   text-decoration: none;
@@ -14,34 +37,9 @@
   @include headerItemSpacing;
 }
 
-.navbar__mobile {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 65vw;
-  max-width: 300px;
-  background-color: #545454;
-  padding: 60px 15px 25px;
-  max-height: 100vh;
-  overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform .2s ease-in-out;
-
-  &.visible {
-    transform: translateX(0);
-  }
-
-  > li {
-    padding: 10px 0;
-  }
-}
-
 .navbar__toggle {
   border: 0;
   padding: 12px;
   padding-right: 0;
   background-color: transparent;
-  z-index: 2;
 }

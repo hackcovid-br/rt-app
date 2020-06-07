@@ -1,9 +1,13 @@
+import "./Layout.scss"
 import Header from "components/Header"
 import { Helmet } from "react-helmet"
 
+import { useMaxWidth } from 'hooks';
+
 function Layout({ children }) {
+  const isMobile = useMaxWidth();
   return (
-    <div className="main-layout">
+    <div className={isMobile ? 'mobile-layout' : 'desktop-layout'}>
       <Helmet>
         <title>HackCovid</title>
         <meta

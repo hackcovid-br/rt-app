@@ -1,12 +1,12 @@
 import "./Home.scss"
 import Layout from "layouts"
+import { useRef } from "react"
 
 import CountrySummary from "./components/CountrySummary"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import MetaTags from "./components/MetaTags"
 import StatesSummary from "./components/StatesSummary"
-import { useRef } from "react"
 
 export default function Rt() {
   const apiLinkRef = useRef(null)
