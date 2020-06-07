@@ -5,6 +5,24 @@
   display: flex;
 }
 
+.mobile-layout .navbar {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 65vw;
+  max-width: 300px;
+  background-color: $bg_header;
+  height: calc(100vh - #{$header-height});
+  overflow-y: auto;
+  z-index: 1;
+  transition: transform .2s ease-in-out;
+
+  > li {
+    padding: 10px;
+  }
+}
+
 .navbar__item {
   display: block;
   text-decoration: none;
@@ -12,4 +30,22 @@
   font-size: 18px;
   font-weight: 400;
   @include headerItemSpacing;
+}
+
+.navbar__toggle {
+  border: 0;
+  padding: 12px;
+  padding-right: 0;
+  background-color: transparent;
+}
+
+.navbar__overlay {
+  opacity: 0.4;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg_header;
+  z-index: -1;
 }

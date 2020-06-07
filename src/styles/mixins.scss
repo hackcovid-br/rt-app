@@ -1,6 +1,4 @@
 @mixin headerItemSpacing {
-  @include above(501px) {
-    padding: 15px;
-    margin: 0 20px;
-  }
+  padding: 15px;
+  margin: 0 20px;
 }

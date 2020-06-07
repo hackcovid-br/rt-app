@@ -2,6 +2,22 @@
   background-color: $bg_header;
 }
 
+.mobile-layout .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  .header__container {
+    height: $header-height;
+  }
+
+  .logo__link {
+    margin: 0 auto;
+  }
+}
+
 .header__container {
   display: flex;
   align-items: center;
