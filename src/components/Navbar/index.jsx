@@ -58,6 +58,8 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+
+      { state.showSidebar && <span className="navbar__overlay" onClick={toggleSidebar} /> }
     </>
   )
 }
