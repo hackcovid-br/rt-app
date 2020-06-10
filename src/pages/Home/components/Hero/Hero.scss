@@ -19,7 +19,7 @@
     font-size: 90px;
     font-weight: bold;
     line-height: 110px;
-    color: $text-color;
+    color: $fg;
     max-width: 994px;
     margin-top: 60px;
     margin-left: auto;
@@ -39,7 +39,7 @@
     }
 
     span {
-      color: $primary;
+      color: $fg_featured;
     }
   }
 

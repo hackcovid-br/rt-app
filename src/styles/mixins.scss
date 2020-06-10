@@ -2,3 +2,14 @@
   padding: 15px;
   margin: 0 20px;
 }
+
+@mixin aboutUsTitle {
+  @include above($mobile-cutoff + 1px) {
+    font-size: $section-title-size;
+    line-height: $section-title-line-height;
+  }
+  @include below($mobile-cutoff) {
+    font-size: $section-title-size-mobile;
+    line-height: $section-title-line-height-mobile;
+  }
+}

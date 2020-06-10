@@ -1,0 +1,104 @@
+.about-us__hero {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+
+.about-us__presentation {
+  text-align: center;
+  padding-bottom: 5vh;
+
+  h1 {
+    font-size: 34px;
+    color: $grey-primary
+  }
+}
+
+.about-us {
+
+  > section:not(:first-child, :last-child) {
+    padding-top: $section-vertical-spacing;
+    padding-bottom: $section-vertical-spacing;
+  }
+
+  > :nth-child(even){
+    background-color: $bg;
+  } 
+
+  h3 {
+    color: $fg_title;
+    @include aboutUsTitle;
+  }
+
+  h2 {
+    max-width: 800px;
+    margin: 0 auto;
+    @include aboutUsTitle;
+  }
+
+  .section-text {
+    font-weight: bold;
+
+    @include above($mobile-cutoff + 1px) {
+      width: 80%;
+      font-size: 26px;
+      line-height: 45px;
+    }
+    @include below($mobile-cutoff) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  .divided {
+    @include above($alternative-mobile-cutoff + 1px) {
+      display: flex;
+  
+      > :nth-child(odd) {
+        padding-right: 10px;
+      }
+  
+      > :nth-child(even) {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .text-side {
+    @include above($alternative-mobile-cutoff + 1px) {
+      width: 60%;
+    }
+  }
+
+  .image-side > img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    @include above($alternative-mobile-cutoff + 1px) {
+      max-width: 430px;
+    }
+    @include below($alternative-mobile-cutoff) {
+      max-width: 290px;
+    }
+  }
+
+  .ending {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+
+    h3 {
+      color: $fg;
+      max-width: 1033px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.logo-hackcovid-container {
+  text-align: center;
+  padding: 15vh 0 0;
+
+  img {
+    width: 100%;
+    max-width: 296px;
+  }
+}

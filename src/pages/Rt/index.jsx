@@ -1,4 +1,3 @@
-import "./Home.scss"
 import Layout from "layouts"
 import { useRef } from "react"
 

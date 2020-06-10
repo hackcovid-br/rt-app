@@ -1,10 +1,9 @@
-import "./Home.scss"
-
 import Layout from "layouts"
-import Hero from "./components/Hero"
+
 import Apply from "./components/Apply"
-import TalkWithUs from "./components/TalkWithUs"
 import Footer from "./components/Footer"
+import Hero from "./components/Hero"
+import TalkWithUs from "./components/TalkWithUs"
 
 function Home() {
   return (

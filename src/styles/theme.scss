@@ -1,3 +1,5 @@
+@import "./palette";
+
 /**
  * Theme Colors
  *
@@ -5,6 +7,17 @@
  * fg = foreground
  */
 
+$bg: $athens_gray;
 $bg_header: $emperor;
 
+
+$fg: $baltic_sea;
+$fg_secondary: $cape_cod;
 $fg_navbar: $alto;
+$fg_featured: $red_berry;
+$fg_link: $red_berry;
+$fg_title: $silver_chalice;
+
+
+$grey-primary: $emperor;
+$grey-light: $silver_chalice;
