@@ -1,25 +1,11 @@
 import "./Navbar.scss"
-import { Link } from "gatsby"
-import { useState } from 'react'
-import { FiMenu, FiX } from "react-icons/fi"
+
+import { useState, useEffect } from 'react'
 
 import { useMaxWidth } from 'hooks'
 
-
-
-function ButtonToggleNavbar ({ isVisible, toggleSidebar }) {
-  const buttonColor = "#d5d5d5";
-  const buttonSize = 24;
-
-  return (
-    <button className="navbar__toggle" onClick={toggleSidebar}> 
-      { isVisible
-        ? <FiX color={buttonColor} size={buttonSize} />
-        : <FiMenu color={buttonColor} size={buttonSize} /> }
-    </button>
-  )
-}
-
+import ButtonToggleNavbar from './ButtonToggleNavbar'
+import NavLinks from "./NavLinks"
 
 export default function Navbar() {
   
@@ -34,16 +20,15 @@ export default function Navbar() {
   }
 
   const isMobile = useMaxWidth();
-  
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-    },{
-      name: "Rt",
-      link: "/rt",
-    },
-  ];
+
+  useEffect(() => {
+    return () => {
+      setState({
+        showSidebar: false,
+      })
+    }
+
+  }, [])
 
   return (
     <>
@@ -51,19 +36,7 @@ export default function Navbar() {
         isVisible={state.showSidebar} 
         toggleSidebar={toggleSidebar} /> }
 
-      <ul className="navbar" 
-        style={ isMobile && !state.showSidebar 
-          ? {transform: 'translateX(100%)'} 
-          : {transform: 'translateX(0)'}} 
-      >
-        {navItems.map(item => (
-          <li key={item.link}>
-            <Link to={item.link} className={`navbar__item`} onClick={toggleSidebar}>
-              {item.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <NavLinks isVisible={state.showSidebar} />
 
       { state.showSidebar && <span className="navbar__overlay" onClick={toggleSidebar} /> }
     </>
