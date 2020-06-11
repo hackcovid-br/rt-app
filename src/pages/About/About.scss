@@ -14,10 +14,17 @@
 }
 
 .about-us {
+  display: grid;
+  grid-auto-rows: 1fr;
 
-  > section:not(:first-child, :last-child) {
-    padding-top: $section-vertical-spacing;
-    padding-bottom: $section-vertical-spacing;
+  > section {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child, :last-child) {
+      padding-top: $section-vertical-spacing;
+      padding-bottom: $section-vertical-spacing;
+    }
   }
 
   > :nth-child(even){
