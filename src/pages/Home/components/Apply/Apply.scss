@@ -32,7 +32,7 @@
     }
 
     span {
-      color: $primary;
+      color: $fg_featured;
     }
   }
 
@@ -46,8 +46,8 @@
   }
 
   .apply-button {
-    color: $primary;
-    border: 6px solid $primary;
+    color: $fg_link;
+    border: 6px solid $fg_link;
     border-radius: 16px;
     padding: 20px 90px;
     margin-top: 153px;

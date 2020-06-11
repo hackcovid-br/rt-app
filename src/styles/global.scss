@@ -36,3 +36,16 @@ html {
 .md-indent {
   text-indent: 28px;
 }
+
+.link {
+  text-decoration: none;
+  color: $fg_link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.featured-text {
+  color: $fg_featured;
+}

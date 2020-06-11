@@ -1,9 +1,4 @@
-$primary: #910000;
-$foreground: #373f41;
-$grey-primary: #545454;
-$grey-light: #ababab;
-
-$text-color: #1d1d1f;
+@import "./theme";
 
 $header-height: 55px;
 
@@ -12,3 +7,12 @@ $container-width: 1280px;
 $mobile-cutoff: 600px;
 $desktop-cutoff: 1080px;
 $hd-cutoff: 1800px;
+
+$section-vertical-spacing: 55px;
+$section-title-size: 55px;
+$section-title-size-mobile: 32px;
+
+$section-title-line-height: 70px;
+$section-title-line-height-mobile: 50px;
+
+$alternative-mobile-cutoff: 767px;

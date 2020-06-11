@@ -29,7 +29,7 @@
   display: block;
   max-width: 920px;
   line-height: 180%;
-  color: $foreground;
+  color: $fg_secondary;
 
   @include below(500px) {
     padding-right: 0;
@@ -39,7 +39,7 @@
 
 .data-description {
   font-weight: bold;
-  color: $foreground;
+  color: $fg_secondary;
 }
 
 .info {
