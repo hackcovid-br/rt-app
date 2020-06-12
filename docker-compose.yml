@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  rt:
+    container_name: rt
+    build: .
+    working_dir: /app
+    command: sh docker-start.sh
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /tmp/exclude:/app/node_modules

@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://hackcovid.com.br",
   "scripts": {
-    "start": "gatsby develop --open",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d public",
