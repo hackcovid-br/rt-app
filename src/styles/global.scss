@@ -46,6 +46,18 @@ html {
   }
 }
 
-.featured-text {
+.featured-text,
+.highlight {
   color: $fg_featured;
+}
+
+.main-title {
+  color: $main-title;
+  @include sectionTitleSizes();
+}
+
+.page-subject-text {
+  max-width: $page-subject-text-width;
+  margin-right: auto;
+  @include sectionTextSizes;
 }

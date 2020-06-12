@@ -15,9 +15,10 @@
     "format": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
-    "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1242.tgz?v=3",
-    "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1474.tgz?v=3",
-    "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted@915.tgz?v=3",
+    "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1300.tgz?v=3",
+    "@bbjacob123/mobility-in-brazilian-states": "https://api.observablehq.com/@bbjacob123/mobility-in-brazilian-states@440.tgz?v=3",
+    "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1475.tgz?v=3",
+    "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted@982.tgz?v=3",
     "@observablehq/runtime": "4",
     "gatsby": "^2.21.21",
     "gatsby-alias-imports": "^1.0.4",
