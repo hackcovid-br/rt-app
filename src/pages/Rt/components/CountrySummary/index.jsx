@@ -1,8 +1,9 @@
 import "./CountrySummary.scss"
 
+import BarChart from "components/BarChart"
+
 import { useMaxWidth } from 'hooks';
 
-import BarChart from "../BarChart"
 
 function CountrySummary() {
   const isMobile = useMaxWidth();
