@@ -55,8 +55,18 @@ html {
   @include sectionTitleSizes();
 }
 
-section.content {
-  margin-top: 3rem;
+section.content,
+section.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+section.footer {
+  background-color: $bg_footer;
+  
+  ul {
+    color: $fg_secondary;
+  }
 }
 
 .page-subject-text {

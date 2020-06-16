@@ -12,8 +12,9 @@ export default function Mobility() {
       <Helmet>
         <title> Mobilidade Covid-19 | HackCovid </title>
       </Helmet>
-      <div className="container main">
-        <section className="hero">
+      
+      <section className="hero">
+        <div className="container">
           <h1> Mobilidade Covid-19 </h1>
           <p className="text-limit-width bold">
             Como o vírus é transmitido por proximidade, é importante acompanhar 
@@ -26,14 +27,30 @@ export default function Mobility() {
             estão ou não respeitando as restrições sociais</Highligh> estabelecidas em seu estado.
           </p>
           <LastDate />
-        </section>
-        <section className="content">
+        </div>
+      </section>
+
+      <section className="content">
+        <div className="container">
           <h2> Comparação entre estados </h2>
           <StatesGrid 
             render={uf => <MobilityChart uf={uf} /> }
           />
-        </section>
-      </div>
+        </div>
+      </section>
+
+      <section className="footer">
+        <div className="container">
+          <h4> Referências e Recursos </h4>
+          <ul>
+            <li> Dados do Mobility Report da Google (
+              <a href="https://www.google.com/covid19/mobility/">
+                https://www.google.com/covid19/mobility/
+              </a>) 
+            </li>
+          </ul>
+        </div>
+      </section>
     </Layout>
   )
 }
