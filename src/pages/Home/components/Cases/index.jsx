@@ -1,6 +1,6 @@
+import NavigationButton from 'components/NavigationButton';
 import React from 'react';
 import './Cases.scss';
-import NavigationButton from 'components/NavigationButton';
 
 export default function Cases() {
     return (
