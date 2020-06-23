@@ -9,6 +9,9 @@ export default function NavLinks ({ isVisible }) {
       name: "Transmissão",
       link: "/rt",
     },{
+      name: "Mobilidade",
+      link: "/mobilidade",
+    },{
       name: "Sobre",
       link: "/sobre"
     },

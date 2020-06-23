@@ -1,4 +1,5 @@
 import "./Hero.scss"
+import InfoButton from 'components/InfoButton'
 import LastDate from "components/LastDate"
 
 export default function Hero({ apiLinkRef }) {
@@ -37,14 +38,8 @@ export default function Hero({ apiLinkRef }) {
         pandemia diminui rapidamente antes de infectar muita gente.
       </p>
       <p className="data-description">
-        Dados até: <LastDate />
-        <button
-          className="info"
-          title="Mais informações"
-          onClick={handleClickInfo}
-        >
-          i
-        </button>
+        <LastDate />
+        <InfoButton onClick={handleClickInfo} />
       </p>
     </section>
   )

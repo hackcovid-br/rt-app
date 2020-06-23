@@ -1,5 +1,6 @@
 import define from "@bbjacob123/rt-chart"
 import { Runtime } from "@observablehq/runtime"
+import Highlight from 'components/Highlight'
 import { useState, useEffect } from "react"
 
 export default function LastDate() {
@@ -18,5 +19,5 @@ export default function LastDate() {
     })
   }, [])
 
-  return <span className="featured-text">{state.lastDate}</span>
+  return <span className="bold"> Dados até: <Highlight>{state.lastDate}</Highlight> </span>
 }
