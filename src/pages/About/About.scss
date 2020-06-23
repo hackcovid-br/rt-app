@@ -33,27 +33,20 @@
 
   h3 {
     color: $fg_title;
-    @include aboutUsTitle;
+    @include sectionTitleSizes;
   }
 
   h2 {
     max-width: 800px;
     margin: 0 auto;
-    @include aboutUsTitle;
+    @include sectionTitleSizes;
   }
 
   .section-text {
-    font-weight: bold;
-
     @include above($mobile-cutoff + 1px) {
       width: 80%;
-      font-size: 26px;
-      line-height: 45px;
     }
-    @include below($mobile-cutoff) {
-      font-size: 18px;
-      line-height: 30px;
-    }
+    @include sectionTextSizes;
   }
 
   .divided {

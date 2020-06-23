@@ -3,7 +3,7 @@
   margin: 0 20px;
 }
 
-@mixin aboutUsTitle {
+@mixin sectionTitleSizes {
   @include above($mobile-cutoff + 1px) {
     font-size: $section-title-size;
     line-height: $section-title-line-height;
@@ -11,5 +11,17 @@
   @include below($mobile-cutoff) {
     font-size: $section-title-size-mobile;
     line-height: $section-title-line-height-mobile;
+  }
+}
+
+@mixin sectionTextSizes {
+  font-weight: bold;
+  @include above($mobile-cutoff + 1px) {
+    font-size: $section-text-size;
+    line-height: $section-text-line-height;
+  }
+  @include below($mobile-cutoff) {
+    font-size: $section-text-size-mobile;
+    line-height: $section-text-line-height-mobile;
   }
 }

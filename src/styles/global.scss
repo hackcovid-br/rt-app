@@ -63,3 +63,36 @@ html {
 .silver-chalice {
   color: $silver_chalice;
 }
+
+.main-title {
+  color: $main-title;
+  @include sectionTitleSizes();
+}
+
+section.content,
+section.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+section.footer {
+  background-color: $bg_footer;
+  
+  ul {
+    color: $fg_secondary;
+  }
+}
+
+.page-subject-text {
+  max-width: $page-subject-text-width;
+  margin-right: auto;
+  @include sectionTextSizes;
+}
+
+.bold { 
+  font-weight: bold;
+}
+
+.text-limit-width {
+  max-width: 920px;
+}
