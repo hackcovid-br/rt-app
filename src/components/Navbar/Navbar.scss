@@ -39,6 +39,10 @@
   font-size: 18px;
   font-weight: 400;
   @include headerItemSpacing;
+
+  &.current {
+    border-bottom-color: white;
+  }
 }
 
 .navbar__toggle {

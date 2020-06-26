@@ -23,14 +23,25 @@ export default function NavLinks ({ isVisible }) {
       link: "/sobre"
     },
   ];
+  
+  const pathname = window.location.pathname;
 
   return (
     <ul className={ `navbar ${isVisible ? 'visible' : ''}`} >
       {navItems.map(item => (
         <li key={item.link}>
-          <Link to={item.link} className={`navbar__item`}>
-            {item.name}
-          </Link>
+          { 
+            pathname !== item.link &&
+              <Link to={item.link} className="navbar__item">
+                {item.name}
+              </Link> 
+          }
+          { 
+            pathname === item.link &&
+              <span className="navbar__item current">
+                {item.name}
+              </span> 
+          }
         </li>
       ))}
     </ul>
