@@ -1,5 +1,5 @@
-import define from "@bbjacob123/mobility-in-brazilian-states"
 import { Runtime, Inspector } from "@observablehq/runtime"
+import define from "@santanacostamarco/mobility-in-brazilian-states"
 import { useRef, useEffect } from "react"
 
 export default function MobilityChart({ uf }) {
