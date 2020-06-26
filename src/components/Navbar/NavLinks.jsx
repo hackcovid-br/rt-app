@@ -5,13 +5,20 @@ export default function NavLinks ({ isVisible }) {
     {
       name: "Home",
       link: "/",
-    },{
+    },
+    {
       name: "Transmissão",
       link: "/rt",
-    },{
+    },
+    {
       name: "Mobilidade",
       link: "/mobilidade",
-    },{
+    },
+    {
+      name: "Casos",
+      link: "/casos"
+    },
+    {
       name: "Sobre",
       link: "/sobre"
     },

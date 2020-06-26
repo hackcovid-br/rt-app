@@ -15,4 +15,8 @@ module.exports = {
     path: "/sobre",
     component: "src/pages/About/index.jsx",
   },
+  cases: {
+    path: "/casos",
+    component: "src/pages/Cases/index.jsx",
+  }
 }
