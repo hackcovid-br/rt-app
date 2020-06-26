@@ -15,6 +15,9 @@
     "format": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
+    "@bbjacob123/cases-chart": "https://api.observablehq.com/@bbjacob123/cases-chart.tgz?v=3",
+    "@bbjacob123/covid-19-casos-e-mortes-no-brasil": "https://api.observablehq.com/@bbjacob123/covid-19-casos-e-mortes-no-brasil.tgz?v=3",
+    "@bbjacob123/deaths-chart": "https://api.observablehq.com/@bbjacob123/deaths-chart.tgz?v=3",
     "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1300.tgz?v=3",
     "@bbjacob123/mobility-in-brazilian-states": "https://api.observablehq.com/@bbjacob123/mobility-in-brazilian-states@440.tgz?v=3",
     "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1475.tgz?v=3",
@@ -32,7 +35,6 @@
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sass": "^2.2.1",
     "gh-pages": "^2.2.0",
-    "install": "^0.13.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
