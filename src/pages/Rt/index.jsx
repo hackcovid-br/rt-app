@@ -1,4 +1,4 @@
-import FanChart from "components/FanChart"
+import FanChart from "components/Charts/FanChart"
 import StatesGrid from 'components/StatesGrid'
 import Layout from "layouts"
 import { useRef } from "react"
