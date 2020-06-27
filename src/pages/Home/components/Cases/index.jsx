@@ -17,7 +17,6 @@ export default function Cases() {
         getCasesData();
     }, []);
 
-    console.log({ casesData })
     const hasData = Object.values(casesData).length;
     const {
         total_confirmed: totalConfirmed,
