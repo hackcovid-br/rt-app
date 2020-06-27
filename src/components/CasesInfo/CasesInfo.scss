@@ -1,6 +1,7 @@
 .cases-info {
     height: 123xpx;
     display: flex;
+    align-items: center;
     @include below(1024px){
         margin-bottom: 20px;
     }
@@ -22,6 +23,7 @@
     }
 
     .infos {
+        height: 100%;
         span {
             display: block;
             &.label {
