@@ -1,0 +1,50 @@
+.cases-info {
+    height: 123xpx;
+    display: flex;
+    @include below(1024px){
+        margin-bottom: 20px;
+    }
+    .signal {
+        width: 112px;
+        height: 112px;
+        border-radius: 100px;
+        margin-right: 19px;
+        &.red {
+            background-color: $cases_red;
+        }
+
+        &.green {
+            background-color: $light_cyan;
+        }
+        &.gray {
+            background-color: $gray;
+        }
+    }
+
+    .infos {
+        span {
+            display: block;
+            &.label {
+                font-size: 22px;
+            }
+            &.total-cases {
+                @include below(460px){
+                    font-size: 36px;
+                }
+                font-size: 52px;
+                line-height: 1;
+                font-weight: bold;
+                color: black;
+                &.red {
+                    color: $red_berry;
+                }
+                &.green {
+                    color: $dark_green_cyan;
+                }
+            }
+            &.new-numbers {
+                font-size: 22px;
+            }
+        }
+    }
+}
