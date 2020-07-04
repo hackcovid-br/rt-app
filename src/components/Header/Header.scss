@@ -15,6 +15,7 @@
 
   .logo__link {
     margin: 0 auto;
+    display: flex;
   }
 }
 
@@ -22,8 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.logo {
-  @include headerItemSpacing;
+  .logo__link {
+    display: flex;
+  }
 }

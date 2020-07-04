@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Arrow() {
     return (
         <svg width="62" height="40" viewBox="0 0 62 40" fill="none" xmlns="http://www.w3.org/2000/svg">
