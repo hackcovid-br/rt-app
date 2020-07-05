@@ -1,3 +1,4 @@
+import { globalHistory } from '@reach/router';
 import { Link } from "gatsby"
 
 export default function NavLinks ({ isVisible }) {
@@ -24,7 +25,8 @@ export default function NavLinks ({ isVisible }) {
     },
   ];
   
-  const pathname = window.location.pathname;
+  const pathname = globalHistory.location.pathname;
+  console.log(pathname)
 
   return (
     <ul className={ `navbar ${isVisible ? 'visible' : ''}`} >
