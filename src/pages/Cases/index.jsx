@@ -1,8 +1,8 @@
 import './Cases.scss';
 
-//import Evolution from 'components/Charts/Evolution';
 import CasesChart from 'components/Charts/Cases';
 import DeathsChart from 'components/Charts/Deths';
+import Evolution from 'components/Charts/Evolution';
 import LastDate from 'components/LastDate';
 import StatesGrid from 'components/StatesGrid';
 import Layout from 'layouts';
@@ -38,7 +38,7 @@ export default function Cases() {
             Comparação entre estados
           </h2>
 
-          {/*<Evolution/>*/}
+          <Evolution type={chartType}/>
          
           <div className="chart-switcher">
             <button className={chartType === 'deaths' ? 'current' : ''} 
@@ -47,8 +47,8 @@ export default function Cases() {
               Óbitos
             </button>
 
-            <button className={chartType === 'cases' ? 'current' : ''} 
-              onClick={ () => setChartType('cases') }
+            <button className={chartType === 'confirmed' ? 'current' : ''} 
+              onClick={ () => setChartType('confirmed') }
             >
               Casos
             </button>
@@ -56,7 +56,7 @@ export default function Cases() {
 
           <StatesGrid render={ uf => (
             <>
-              { chartType === 'cases' && <CasesChart uf={ uf } /> }
+              { chartType === 'confirmed' && <CasesChart uf={ uf } /> }
               { chartType === 'deaths' && <DeathsChart uf = { uf } /> }
             </>
           )} />
