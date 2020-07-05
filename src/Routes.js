@@ -18,5 +18,9 @@ module.exports = {
   cases: {
     path: "/casos",
     component: "src/pages/Cases/index.jsx",
+  },
+  noRoute: {
+    path: "/404.html",
+    component: "src/pages/NoRoute/index.jsx",
   }
 }
