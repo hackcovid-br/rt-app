@@ -1,66 +1,90 @@
 .talk-container {
   .container {
-    height: 100vh;
-    max-height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-  }
-
-  .text-content,
-  .talk-title {
-    max-width: 913px;
-    margin: 0 auto;
-    @include below(1000px) {
-      max-width: 670px;
-    }
-    @include below(760px) {
-      max-width: 500px;
-    }
-  }
-
-  .talk-title,
-  .talk-subtitle {
-    font-size: 55px;
-    word-break: break-all;
-
-    @include below(1000px) {
-      font-size: 40px;
-    }
-    @include below(760px) {
-      font-size: 27px;
-    }
-
-    span {
-      color: $fg_featured;
+    text-align: center;
+    padding: 80px 280px;
+    // flex-direction: column;
+    .talk-title {
+      // font-family: Noto Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 52px;
+      line-height: 90px;
+      margin: 0;
+      letter-spacing: 0.2px;
+      span {
+        color: $fg_featured;
+      }
     }
   }
 
-  .text-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
+  // .text-content,
+  // .talk-title {
+  //   font-style: normal;
+  //   font-weight: 600;
+  //   font-size: 52px;
+  //   line-height: 90px;
+  //   //word-break: break-all;
+  //   span {
+  //     color: $fg_featured;
+  //   }
+  //   @include below(1000px) {
+  //     margin-top: 150px;
+  //   }
+  //   @include below(500px) {
+  //     margin-top: 70px;
+  //   }
+    // @include below(1000px) {
+    //   max-width: 670px;
+    // }
+    // @include below(760px) {
+    //   max-width: 500px;
+    // }
+  // }
 
-  .talk-title {
-    color: $grey-light;
-    margin-bottom: 5px;
-    width: 100%;
-    margin-top: 233px;
-    @include below(1000px) {
-      margin-top: 150px;
-    }
-    @include below(500px) {
-      margin-top: 70px;
-    }
-  }
+  // .talk-title,
+  // .talk-subtitle {
+  //   font-size: 55px;
+  //   word-break: break-all;
 
-  .talk-subtitle {
-    margin-top: 0px;
+  //   @include below(1000px) {
+  //     font-size: 40px;
+  //   }
+  //   @include below(760px) {
+  //     font-size: 27px;
+  //   }
 
-    @include below(760px) {
-      font-size: 21px;
-    }
-  }
+  //   span {
+  //     color: $fg_featured;
+  //   }
+  // }
+
+  // .text-content {
+  //   flex: 1;
+  //   display: flex;
+  //   align-items: center;
+  // }
+
+  // .talk-title {
+  //   color: $grey-light;
+  //   margin-bottom: 5px;
+  //   width: 100%;
+  //   margin-top: 233px;
+  //   @include below(1000px) {
+  //     margin-top: 150px;
+  //   }
+  //   @include below(500px) {
+  //     margin-top: 70px;
+  //   }
+  // }
+
+  // .talk-subtitle {
+  //   margin-top: 0px;
+
+  //   @include below(760px) {
+  //     font-size: 21px;
+  //   }
+  // }
 }

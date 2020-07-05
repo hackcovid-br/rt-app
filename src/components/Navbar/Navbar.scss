@@ -3,6 +3,14 @@
   padding: 0;
   margin: 0;
   display: flex;
+
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .desktop-layout .navbar {
@@ -35,10 +43,14 @@
 .navbar__item {
   display: block;
   text-decoration: none;
-  color: $fg_navbar;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  @include headerItemSpacing;
+  color: #838383;
+  transition: color .2s linear;
+  // @include headerItemSpacing;
+  &:hover {
+    color: #232224;
+  }
 }
 
 .navbar__toggle {

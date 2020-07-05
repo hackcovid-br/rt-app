@@ -1,70 +1,83 @@
 .hero-container {
-  height: calc(100vh - 56px);
-  max-height: 940px;
-  min-height: 500px;
-  border-bottom: 1px solid $grey-primary;
-  @include below(500px) {
-    height: calc(100vh - 26px);
-  }
+  height: 100vh;
+  //height: calc(100vh - 56px);
+  // max-height: 940px;
+  // min-height: 500px;
+  // border-bottom: 1px solid $grey-primary;
+  // @include below(500px) {
+  //   height: calc(100vh - 26px);
+  // }
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url("../../../../assets/fundoHero.png");
 
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    // padding-top: 60px;
+    // padding-bottom: 40px;
+    img {
+      width: 105px;
+      height: 44px;
+    }
   }
 
-  .hero-title {
+  h1.hero-title {
     text-align: center;
-    font-size: 90px;
+    font-size: 82px;
     font-weight: bold;
     line-height: 110px;
     color: $fg;
-    max-width: 994px;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10vh;
+    padding-top: 46px;
+    padding-bottom: 40px;
+    letter-spacing: 0.2px;
+    margin: 0;
     @include below(900px) {
       font-size: 50px;
       line-height: 70px;
       max-width: 570px;
-      margin-bottom: 70px;
+      padding-bottom: 70px;
     }
     @include below(520px) {
       font-size: 32px;
       line-height: 50px;
       max-width: 300px;
-      margin-bottom: 40px;
+      padding-bottom: 40px;
     }
 
     span {
-      color: $fg_featured;
+      display: block;
+      font-size: 52px;
+      line-height: 50px;
+      padding-top: 15px;
+      // color: $fg_featured;
     }
   }
 
-  .hc-loco-wrapper {
-    max-width: 550px;
-    margin: 0 auto;
-    padding: 0 20px;
+  // .hc-loco-wrapper {
+  //   max-width: 550px;
+  //   margin: 0 auto;
+  //   padding: 0 20px;
 
-    #eb9z872tqwzv4 {
-      animation-name: eb9z872tqwzv4_f_o, eb9z872tqwzv4_s_o, eb9z872tqwzv4_s_do;
-      animation-duration: 3300ms;
-      animation-fill-mode: forwards;
-      animation-timing-function: linear;
-      animation-direction: normal;
-      animation-iteration-count: 1;
-    }
-    #eb9z872tqwzv5 {
-      animation: eb9z872tqwzv5_c_o 3300ms linear 1 normal forwards;
-    }
+  //   #eb9z872tqwzv4 {
+  //     animation-name: eb9z872tqwzv4_f_o, eb9z872tqwzv4_s_o, eb9z872tqwzv4_s_do;
+  //     animation-duration: 3300ms;
+  //     animation-fill-mode: forwards;
+  //     animation-timing-function: linear;
+  //     animation-direction: normal;
+  //     animation-iteration-count: 1;
+  //   }
+  //   #eb9z872tqwzv5 {
+  //     animation: eb9z872tqwzv5_c_o 3300ms linear 1 normal forwards;
+  //   }
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
+  //   svg {
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
 }
 
 @keyframes eb9z872tqwzv5_c_o {

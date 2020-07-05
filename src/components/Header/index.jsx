@@ -3,6 +3,8 @@ import "./Header.scss"
 import Navbar from "components/Navbar"
 import { Link } from "gatsby"
 
+import logo from '../../assets/logoMenu.svg';
+
 function Header() {
   return (
     <header className="header">
@@ -10,7 +12,7 @@ function Header() {
         <Link to="/" className="logo__link">
           <img
             className="logo"
-            src="/images/header_logo.png"
+            src={logo}
             alt="HackCovid logo"
           />
         </Link>
