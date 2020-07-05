@@ -26,7 +26,6 @@ export default function NavLinks ({ isVisible }) {
   ];
   
   const pathname = globalHistory.location.pathname;
-  console.log(pathname)
 
   return (
     <ul className={ `navbar ${isVisible ? 'visible' : ''}`} >
