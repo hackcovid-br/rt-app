@@ -14,9 +14,9 @@ function Home() {
     <Layout>
       <Hero />
       <Because />
+      <Cases />
       <Streaming />
       <Mobility />
-      <Cases />
       <Apply />
       <TalkWithUs />
       <Footer />
