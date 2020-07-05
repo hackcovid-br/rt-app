@@ -1,13 +1,6 @@
 .hero-container {
   height: 100vh;
-  //height: calc(100vh - 56px);
-  // max-height: 940px;
-  // min-height: 500px;
-  // border-bottom: 1px solid $grey-primary;
-  // @include below(500px) {
-  //   height: calc(100vh - 26px);
-  // }
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-image: url("../../../../assets/fundoHero.png");
 
@@ -16,44 +9,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // padding-top: 60px;
-    // padding-bottom: 40px;
     img {
       width: 105px;
       height: 44px;
     }
   }
-
+  
   h1.hero-title {
-    text-align: center;
-    font-size: 82px;
-    font-weight: bold;
-    line-height: 110px;
     color: $fg;
-    padding-top: 46px;
-    padding-bottom: 40px;
-    letter-spacing: 0.2px;
-    margin: 0;
-    @include below(900px) {
-      font-size: 50px;
-      line-height: 70px;
-      max-width: 570px;
-      padding-bottom: 70px;
-    }
-    @include below(520px) {
-      font-size: 32px;
-      line-height: 50px;
-      max-width: 300px;
-      padding-bottom: 40px;
-    }
-
-    span {
+    text-align: center;
+    font-weight: bold;
+  
+    > span {
       display: block;
-      font-size: 52px;
-      line-height: 50px;
-      padding-top: 15px;
-      // color: $fg_featured;
+      
+      &:first-child {
+        font-size: 82px;
+        text-transform: uppercase;
+      }
+      
+      &:last-child {
+        margin-top: -30px;
+        font-size: 52px;
+      }
     }
+    // @include below(900px) {
+    //   font-size: 50px;
+    //   line-height: 70px;
+    //   max-width: 570px;
+    //   padding-bottom: 70px;
+    // }
+    // @include below(520px) {
+    //   font-size: 32px;
+    //   line-height: 50px;
+    //   max-width: 300px;
+    //   padding-bottom: 40px;
+    // }
+
   }
 
   // .hc-loco-wrapper {
