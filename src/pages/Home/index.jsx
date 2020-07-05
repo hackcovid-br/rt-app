@@ -1,4 +1,5 @@
 import Layout from "layouts"
+import { Helmet } from 'react-helmet';
 
 import Apply from "./components/Apply"
 import CasesContainer from './components/CasesContainer';
@@ -9,6 +10,9 @@ import TalkWithUs from "./components/TalkWithUs"
 function Home() {
   return (
     <Layout>
+      <Helmet>
+        <title>HackCovid | Empodere-se com ciência e dados.</title>
+      </Helmet>
       <Hero />
       <CasesContainer />
       <Apply />

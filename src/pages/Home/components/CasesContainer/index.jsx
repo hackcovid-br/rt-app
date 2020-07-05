@@ -1,6 +1,7 @@
 import "./CasesContainer.scss"
 import Button from 'components/Button';
-import Cases from "components/Cases"
+import Cases from 'components/Cases';
+import { navigateTo } from 'gatsby'
 
 function CasesContainer() {
   return (
@@ -13,7 +14,9 @@ function CasesContainer() {
           </div>
           <Cases />
           <div className="button-wrapper">
-            <Button label="Veja Agora" />
+            <Button label="Veja Agora" onClick={ () => {
+              navigateTo('/casos')
+            }} />
           </div>
         </div>
       </section>
