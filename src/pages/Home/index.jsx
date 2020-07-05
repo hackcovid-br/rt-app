@@ -3,7 +3,6 @@ import Layout from "layouts"
 import Apply from "./components/Apply"
 import Because from "./components/Because"
 import Cases from "./components/Cases"
-import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Mobility from "./components/Mobility"
 import Streaming from "./components/Streaming"
@@ -19,7 +18,6 @@ function Home() {
       <Mobility />
       <Apply />
       <TalkWithUs />
-      <Footer />
     </Layout>
   )
 }
