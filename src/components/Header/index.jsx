@@ -2,6 +2,7 @@ import "./Header.scss"
 
 import Navbar from "components/Navbar"
 import { Link } from "gatsby"
+import Logo from "components/Logo"
 
 import logo from '../../assets/logoMenu.svg';
 

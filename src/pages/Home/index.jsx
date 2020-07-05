@@ -7,6 +7,7 @@ import Streaming from "./components/Streaming"
 import Mobility from "./components/Mobility"
 import TalkWithUs from "./components/TalkWithUs"
 import Footer from "./components/Footer"
+import Cases from "./components/Cases"
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Because />
       <Streaming />
       <Mobility />
+      <Cases />
       <Apply />
       <TalkWithUs />
       <Footer />
