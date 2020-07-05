@@ -17,14 +17,13 @@
   font-size: 30px;
 
   @include below(500px) {
-    font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
   }
 }
 
 .answerRt {
-  font-family: sans-serif;
+  font-weight: bold;
   font-size: 14px;
   display: block;
   max-width: 920px;

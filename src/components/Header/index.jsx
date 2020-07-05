@@ -2,17 +2,14 @@ import "./Header.scss"
 
 import Navbar from "components/Navbar"
 import { Link } from "gatsby"
+import Logo from "components/Logo"
 
 function Header() {
   return (
     <header className="header">
       <div className="container header__container">
         <Link to="/" className="logo__link">
-          <img
-            className="logo"
-            src="/images/header_logo.png"
-            alt="HackCovid logo"
-          />
+          <Logo />
         </Link>
         <Navbar />
       </div>
