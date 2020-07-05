@@ -1,5 +1,6 @@
 import './Cases.scss';
 
+import CasesSummary from "components/Cases"
 import CasesChart from 'components/Charts/Cases';
 import DeathsChart from 'components/Charts/Deths';
 import Evolution from 'components/Charts/Evolution';
@@ -27,7 +28,7 @@ export default function Cases() {
             Casos Covid-19
           </h1>
           <div>
-            {/* cases components goes here */}
+            <CasesSummary />
           </div>
           <LastDate/>
         </section>
