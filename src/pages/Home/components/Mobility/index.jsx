@@ -1,7 +1,8 @@
 import "./Mobility.scss"
+import { Link } from "gatsby"
+
 import mobility from '../../../../assets/mobility.png'
 
-import { Link } from "gatsby"
 
 function Mobility() {
   return (
