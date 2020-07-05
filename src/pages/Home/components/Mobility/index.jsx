@@ -1,8 +1,7 @@
-import "./Mobility.scss"
-import { Link } from "gatsby"
-
-import mobility from '../../../../assets/mobility.png'
-
+import "./Mobility.scss";
+import mobility from 'assets/mobility.png';
+import Highligt from 'components/Highlight';
+import { Link } from 'gatsby';
 
 function Mobility() {
   return (
@@ -13,9 +12,15 @@ function Mobility() {
           </div>
           <div className="content-right">
                <h3 className="content__title">Mobilidade</h3>
-              <p className="content__sub-title">As pessoas estão respeitando as restrições de isolamento?</p>
-              <p className="content__description">O índice de mobilidade permite a análise da movimentação das pessoas.</p>
-              <Link to="/" className="content__link">Índice de transmissão do Covid-19 (Rt).</Link>
+              <p className="content__description">
+                As pessoas estão respeitando as restrições de isolamento?
+                <br/>
+                O <Highligt>índice de mobilidade</Highligt> permite a análise 
+                da <Highligt>movimentação das pessoas</Highligt>.
+              </p>
+              <Link to="/mobilidade" className="default-button"> 
+                Confira o índice da sua região
+              </Link>
           </div>
       </div>
     </div>
