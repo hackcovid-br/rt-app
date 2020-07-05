@@ -5,6 +5,10 @@ body {
   color: $fg;
 }
 
-h1, h2, h3, h4, h5, h6, .title {
+h1, h2, h3, h4, h5, h6, .title, .subtitle {
   font-family: "Noto Sans", sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 400;
 }

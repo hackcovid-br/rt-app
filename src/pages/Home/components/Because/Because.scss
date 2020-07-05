@@ -1,76 +1,76 @@
-.because-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 72px;
-}
+
 
 .because-title {
-    max-width: 915px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 70px;
-    letter-spacing: 0.2px;
-    span {
-        color: #910000;
-    }
+  max-width: 1000px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box-content {
+  display: flex;
+
+  .box-col {
+    &.left, &.right {
+      display: flex;
+      flex: 1 1 0%;
+    }
+
+    &.left {
+      flex-direction: column;
+      justify-content: space-between;
+      
+      .box__item {
+        margin: 20px;
+        margin-right: -130px;
+      }
+
+      .content__title {
+        margin-left: auto;
+        text-align: right;
+      }
+
+      .content__title {
+        padding-right: 30px;
+      }
+    }
+
+    &.right {
+      align-items: center;
+
+      .box__item {
+        margin: 20px;
+        margin-left: -130px;
+      }
+      .content__title {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .box__item {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    position: relative;
-    .box__icon {
-        position: absolute;
-    }
-    
-}
+  }
 
-.box__item {
-    max-width: 500px;
+  $circle_radius: 56px;
+  $circle_diameter: $circle_radius * 2;
+
+  .content__icon {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    padding: 20px 0px;
-    padding-right: 380px;
+    width: $circle_diameter;
+    height: $circle_diameter;
+    background-color: rgba(213, 213, 213, 0.65);
+    border-radius: $circle_radius;
+    position: relative;
+  }
 
-    &:nth-child(3n) {
-        padding-right: 0;
-        padding-left: 380px;
-        .content {
-            &__title {
-
-                text-align: left;
-            }
-            &__icon {
-                margin-right: 30px;
-                margin-left: 0;
-            }
-        }
-    }
-    
-    .content {
-        &__title {
-            text-align: right;
-        }
-        &__icon {
-            min-width: 112px;
-            min-height: 112px;
-            background-color: rgba(213, 213, 213, 0.65);
-            border-radius: 50%;
-            position: relative;
-            margin-left: 30px;
-            img {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-    }
+  .content__title {
+    flex: 1 1 0%;
+    max-width: 386px;
+  }
 }
