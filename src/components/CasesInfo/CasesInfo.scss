@@ -10,6 +10,8 @@
         height: 112px;
         border-radius: 100px;
         margin-right: 19px;
+        display: flex;
+        justify-content: center;
         &.red {
             background-color: $cases_red;
         }

@@ -23,7 +23,7 @@ function Footer({ apiLinkRef }) {
           <li ref={apiLinkRef} className="footer-description-item">
             <a className="link" href="https://github.com/wcota/covid19br">
               API
-            </a>{" "}
+            </a> {" "}
             dos dados usados no modelo.
           </li>
         </ul>
