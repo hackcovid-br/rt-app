@@ -3,6 +3,9 @@
   background-position: top;
   background-repeat: no-repeat;
   background-image: url("../../../../assets/fundoHero.png");
+  @include below(900px){
+    background-position-y: 35%;
+  }
 
   .container {
     display: flex;
@@ -14,25 +17,26 @@
       height: 44px;
     }
   }
-  
+
   h1.hero-title {
-    color: $fg;
     text-align: center;
     font-weight: bold;
-  
-    > span {
+    text-transform: uppercase;
+    span {
       display: block;
-      
-      &:first-child {
-        font-size: 82px;
-        text-transform: uppercase;
-      }
-      
-      &:last-child {
+      font-size: 24px;
+    }
+
+    @include above(900px){
+      color: $fg;
+      font-size: 82px;
+      margin-bottom: 11px;
+      span {
         margin-top: -30px;
         font-size: 52px;
       }
     }
+
     // @include below(900px) {
     //   font-size: 50px;
     //   line-height: 70px;
@@ -45,7 +49,6 @@
     //   max-width: 300px;
     //   padding-bottom: 40px;
     // }
-
   }
 
   // .hc-loco-wrapper {

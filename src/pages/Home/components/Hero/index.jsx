@@ -7,9 +7,7 @@ function Hero() {
     <div className="hero-container">
       <div className="container">
         <h1 className="hero-title">
-          <span>
-            Empodere-se 
-          </span>
+          Empodere-se 
           <span>
             com ciência e dados
           </span>
@@ -20,3 +18,4 @@ function Hero() {
   )
 }
 export default Hero
+
