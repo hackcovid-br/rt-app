@@ -1,44 +1,73 @@
 .streaming-container {
-    background: #FFF;
+    background: #fff;
     padding-bottom: 70px;
     .container {
         display: flex;
+        flex-direction: column-reverse;
         justify-content: space-evenly;
-    }
-    .content {
-        &__title {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 60px;
-            letter-spacing: 0.2px;
-            padding-bottom: 30px;
-            margin: 0;
-        }
-        &__description {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 22px;
-            line-height: 50px;
-            letter-spacing: 0.2px;
-            padding-bottom: 60px;
-            margin: 0;
-            span {
-                color: $fg_featured;
-            }
-        }
-}
-
-    .content-left {
-      margin-top: 40px;
-      width: 525px;
-      max-width: 49%;
     }
 
     .content-right {
-        max-width: 49%;
-        width: 500px;
-        height: 420px;
+        img {
+            width: 100%;
+        }
     }
 
+    .content-left {
+         .default-button {
+            font-size: 12px;
+        }
+
+         .content__description {
+            margin: 15px 0px 35px 0px;
+        }
+    }
+    
+    @include above(1024px) {
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .content {
+            &__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 60px;
+                letter-spacing: 0.2px;
+                padding-bottom: 30px;
+                margin: 0;
+            }
+            &__description {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 50px;
+                letter-spacing: 0.2px;
+                padding-bottom: 60px;
+                margin: 0;
+                span {
+                    color: $fg_featured;
+                }
+            }
+        }
+
+        .content-left {
+            margin-top: 40px;
+            width: 525px;
+            max-width: 49%;
+            .default-button {
+                font-size: 22px;
+            }
+        }
+
+        .content-right {
+            max-width: 49%;
+            width: 500px;
+            height: 420px;
+        }
+    }
 }
