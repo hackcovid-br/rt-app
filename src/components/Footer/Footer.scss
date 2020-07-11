@@ -6,15 +6,24 @@
     align-items: center;
   }
   .contact {
-    h4 {
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 500;
-      margin: 0;
+    p {
+      font-size: 12px;
     }
-    p{
-      margin: 0;
-      font-size: 22px;
+
+    h4 {
+      font-size: 16px;
+    }
+    @include above(1024px){
+      h4 {
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 500;
+        margin: 0;
+      }
+      p{
+        margin: 0;
+        font-size: 22px;
+      }
     }
   }
 
