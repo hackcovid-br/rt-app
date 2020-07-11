@@ -1,16 +1,18 @@
+import Highlight from 'components/Highlight';
+
+import { useMaxWidth } from 'hooks'
+
 export default function Ending () {
+
+  const isMobile = useMaxWidth('767px');
+
   return (
-    <section className="ending">
+    <section className="about-us__ending">
       <div className="container">
-        <h3>
+        <h3 className={`ending-title ${ isMobile ? 'small' : '' }`}>
           Agora não é hora de achismo, mais do que nunca, agora é hora de {' '}
-          todos sermos <span className="featured-text">direcionados por dados</span>.
+          todos sermos <Highlight>direcionados por dados</Highlight>.
         </h3>
-        <div className="logo-hackcovid-container">
-          <img className="logo-hackcovid" 
-              src="/images/about/hackcovid.svg" 
-              alt="HackCovid" />
-        </div>
       </div>
     </section>
   )
