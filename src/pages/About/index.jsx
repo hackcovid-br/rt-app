@@ -2,10 +2,9 @@ import "./About.scss"
 import Layout from 'layouts'
 import { Helmet } from "react-helmet"
 
-import Empowerment from './components/Empowerment'
+import Content from './components/Content'
 import Ending from './components/Ending'
 import Hero from './components/Hero'
-import Indispensble from './components/Indispensable'
 
 export default function AboutUs() {
   return (
@@ -16,8 +15,7 @@ export default function AboutUs() {
 
       <div className="about-us">
         <Hero />
-        <Indispensble />
-        <Empowerment />
+        <Content />
         <Ending />
       </div>
     </Layout>
