@@ -3,7 +3,7 @@
 }
 
 .because-title {
-  font-size: 24px;
+  font-size: 23px;
   text-align: center;
   @include above(1024px) {
     max-width: 1000px;
@@ -14,9 +14,40 @@
   }
 }
 
+$circle_radius: 56px;
+$circle_diameter: $circle_radius * 2;
+
 .box-content {
   display: flex;
+  .content__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(213, 213, 213, 0.65);
+    border-radius: $circle_radius;
+    position: relative;
+  }
+
+  .box-col.left {
+    .box__item {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      > .content__icon {
+        margin-right: 25px;
+        width: 135px;
+        height: 80px;
+        padding: 15px;
+        img {
+          width: 45px;
+        }
+      }
+    }
+  }
+
+
   @include above(1024px) {
+    flex-direction: row;
     .box-col {
       &.left,
       &.right {
@@ -31,6 +62,7 @@
         .box__item {
           margin: 20px;
           margin-right: -130px;
+          flex-direction: row;
         }
 
         .content__title {
@@ -57,9 +89,6 @@
       display: flex;
       align-items: center;
     }
-
-    $circle_radius: 56px;
-    $circle_diameter: $circle_radius * 2;
 
     .content__icon {
       display: flex;

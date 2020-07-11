@@ -8,33 +8,33 @@ import Highlight from 'components/Highlight';
 
 import { useMaxWidth } from 'hooks';
 
-function BoxItem ({ side, icon, children }) {
+function BoxItem({ side, icon, children }) {
   return (
     <div className="box__item">
-      { side === "left" && 
+      {side === "left" &&
         <p className="content__title">
-          { children }
+          {children}
         </p>
       }
 
-      <span className="content__icon">
+      <div className="content__icon">
         <img src={icon} />
-      </span>
+      </div>
 
-      { side === "right" && 
+      {side === "right" &&
         <p className="content__title">
-          { children }
+          {children}
         </p>
       }
     </div>
   )
 }
 
-function BoxItemBalance ({ side }) {
+function BoxItemBalance({ side }) {
   return (
     <BoxItem side={side} icon={iconeBalance} >
       Nos dá a direção se devemos <Highlight>aumentar</Highlight> ou {' '}
-      <Highlight>diminuir</Highlight> as restrições equilibrando a prosperidade 
+      <Highlight>diminuir</Highlight> as restrições equilibrando a prosperidade
       econômica e a saúde da população.
     </BoxItem>
   )
@@ -49,7 +49,7 @@ function Because() {
       <div className="container">
         <div className="text-content">
           <h3 className="because-title">
-            Por que é importante <Highlight>conhecer</Highlight> os dados da 
+            Por que é importante <Highlight>conhecer</Highlight> os dados da
             pandemia do <Highlight>covid-19</Highlight>?
           </h3>
         </div>
@@ -57,25 +57,27 @@ function Because() {
 
           <div className="box-col left">
             <BoxItem side="left" icon={IconeShare} >
-              Podemos <Highlight>acompanhar</Highlight> como o <Highlight>vírus</Highlight> está se 
+              Podemos <Highlight>acompanhar</Highlight> como o <Highlight>vírus</Highlight> está se
               espalhando em cada reigião.
             </BoxItem>
-            { isMobile && 
+            {isMobile &&
               <BoxItemBalance side="left" />
             }
             <BoxItem side="left" icon={iconeBlock} >
-              Nos ajuda a <Highlight>entender</Highlight> a efetividade das 
+              Nos ajuda a <Highlight>entender</Highlight> a efetividade das
               medidas de <Highlight>quarentena</Highlight>.
             </BoxItem>
           </div>
 
-          <div className="box-col center">
-            <div className="box__item">
-              <img src={vectorBashed} alt=""/>
+          {!isMobile && (
+            <div className="box-col center">
+              <div className="box__item">
+                <img src={vectorBashed} alt="" />
+              </div>
             </div>
-          </div>
+          )}
 
-          { !isMobile && 
+          {!isMobile &&
             <div className="box-col right">
               <BoxItemBalance side="right" />
             </div>
