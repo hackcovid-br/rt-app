@@ -42,3 +42,36 @@
     }
 
 }
+
+@include below(1000px) {
+    .streaming-container {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .content-left {
+                margin-bottom: 60px;
+                max-width: 100%;
+            }
+            .content-right {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include below(500px) {
+    .streaming-container {
+        padding-bottom: 0;
+        .container {
+            .content-left {
+
+            }
+            .content-right {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

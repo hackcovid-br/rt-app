@@ -29,3 +29,16 @@
     }
   }
 }
+
+@include below(500px) {
+  .main-footer {
+    .container {
+      flex-direction: column;
+      .content {
+        order: 1;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}

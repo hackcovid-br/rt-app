@@ -53,3 +53,39 @@
   }
 
 }
+
+@include below(1000px) {
+    .apply-container {
+        padding-bottom: 0;
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .content-left {
+                margin-bottom: 80px;
+                max-width: 100%;
+                padding-top: 0;
+            }
+            .content-right {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include below(500px) {
+    .apply-container {
+        .container {
+            .content-left {
+                margin-bottom: 80px;
+                max-width: 100%;
+                padding-top: 0;
+            }
+            .content-right {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
