@@ -54,7 +54,6 @@
 
 @include below(1050px) {
   .hero-container { 
-    height: 80vh;
     // background-image: url("../../../../assets/graficoVirus.png");
     // background-size: contain;
     .container {
@@ -78,7 +77,7 @@
 
 @include below(700px) {
   .hero-container { 
-    height: 60vh;
+    height: 80vh;
     background-image: url("../../../../assets/graficoVirus.png");
     background-size: cover;
     background-repeat: no-repeat;
