@@ -5,13 +5,8 @@ function TalkWithUs() {
     <div className="talk-container">
       <div className="container">
         <h3 className="talk-title">
-          Fale conosco<span>.</span>
+          Na falta da vacina, <span>informação</span> é o melhor remédio.
         </h3>
-        <div className="text-content">
-          <h3 className="talk-subtitle">
-            contato<span>@</span>hackcovid.com.br
-          </h3>
-        </div>
       </div>
     </div>
   )

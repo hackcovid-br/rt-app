@@ -1,21 +1,23 @@
 import Layout from "layouts"
 
 import Apply from "./components/Apply"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import TalkWithUs from "./components/TalkWithUs"
+import Because from "./components/Because"
 import Cases from "./components/Cases"
+import Hero from "./components/Hero"
+import Mobility from "./components/Mobility"
+import Streaming from "./components/Streaming"
+import TalkWithUs from "./components/TalkWithUs"
 
 function Home() {
   return (
     <Layout>
       <Hero />
+      <Because />
       <Cases />
+      <Streaming />
+      <Mobility />
       <Apply />
-
       <TalkWithUs />
-
-      <Footer />
     </Layout>
   )
 }

@@ -1,5 +1,6 @@
 .header {
   background-color: $bg_header;
+  z-index: 1;
 }
 
 .mobile-layout .header {
@@ -13,17 +14,23 @@
     height: $header-height;
   }
 
+
   .logo__link {
-    margin: 0 auto;
-    display: flex;
+    width: 52px;
+    height: 22px;
+    .logo {
+      width: 100%;
+    }
   }
 }
 
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  .logo__link {
-    display: flex;
-  }
+  justify-content: space-between;
+  height: 53px;
+}
+
+.logo {
+  width: 100%;
 }

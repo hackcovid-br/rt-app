@@ -1,71 +1,119 @@
 .hero-container {
-  height: calc(100vh - 56px);
-  max-height: 940px;
-  min-height: 500px;
-  border-bottom: 1px solid $grey-primary;
-  @include below(500px) {
-    height: calc(100vh - 26px);
+  height: 100vh;
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+  .background {
+    width: 100%;
+    position: absolute;
+    top: -50px;
   }
 
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    &-box {
+      position: absolute;
+      left: 50px;
+      top: 40%;
+    }
+
+    
+    .logo {
+      width: 105px;
+      height: 44px;
+      display: block;
+      margin: 0 auto;
+    }
   }
 
-  .hero-title {
+  h1.hero-title {
     text-align: center;
-    font-size: 90px;
     font-weight: bold;
-    line-height: 110px;
-    color: $fg;
-    max-width: 994px;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10vh;
-    @include below(900px) {
-      font-size: 50px;
-      line-height: 70px;
-      max-width: 570px;
-      margin-bottom: 70px;
-    }
-    @include below(520px) {
-      font-size: 32px;
-      line-height: 50px;
-      max-width: 300px;
-      margin-bottom: 40px;
+    text-transform: uppercase;
+    span {
+      display: block;
+      font-size: 24px;
     }
 
-    span {
-      color: $fg_featured;
+    @include above(900px){
+      color: $fg;
+      font-size: 82px;
+      margin-bottom: 11px;
+      span {
+        margin-top: -30px;
+        font-size: 52px;
+      }
     }
+
   }
 
-  .hc-loco-wrapper {
-    max-width: 550px;
-    margin: 0 auto;
-    padding: 0 20px;
+}
 
-    #eb9z872tqwzv4 {
-      animation-name: eb9z872tqwzv4_f_o, eb9z872tqwzv4_s_o, eb9z872tqwzv4_s_do;
-      animation-duration: 3300ms;
-      animation-fill-mode: forwards;
-      animation-timing-function: linear;
-      animation-direction: normal;
-      animation-iteration-count: 1;
-    }
-    #eb9z872tqwzv5 {
-      animation: eb9z872tqwzv5_c_o 3300ms linear 1 normal forwards;
-    }
-
-    svg {
-      width: 100%;
-      height: 100%;
+@include below(1050px) {
+  .hero-container { 
+    height: 50vh;
+    // background-image: url("../../../../assets/graficoVirus.png");
+    // background-size: contain;
+    .container {
+      &-box {
+        top: 40%;
+        .hero-title {
+          span {
+            &:first-child {
+              font-size: 52px;
+            }
+            
+            &:last-child {
+              font-size: 22px;
+            }
+          }
+        }
+      }
     }
   }
 }
+
+@include below(700px) {
+  .hero-container { 
+    background-image: url("../../../../assets/graficoVirus.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    .background {
+      display: none;
+    }
+  }
+}
+
+@include below(420px) {
+  .hero-container { 
+    .container-box {
+      left: 50%;
+      transform: translateX(-50%);
+      .hero-title {
+        width: 100%;
+        min-width: 370px;
+        span {
+          &:first-child {
+            font-size: 35px;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .container {
+      .logo {
+        width: 65px;
+      }
+    }
+  }
+}
+
 
 @keyframes eb9z872tqwzv5_c_o {
   0% {
