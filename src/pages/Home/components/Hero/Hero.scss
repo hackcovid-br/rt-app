@@ -54,12 +54,12 @@
 
 @include below(1050px) {
   .hero-container { 
-    height: 50vh;
+    height: 80vh;
     // background-image: url("../../../../assets/graficoVirus.png");
     // background-size: contain;
     .container {
       &-box {
-        top: 40%;
+        top: 20%;
         .hero-title {
           span {
             &:first-child {
@@ -78,6 +78,7 @@
 
 @include below(700px) {
   .hero-container { 
+    height: 60vh;
     background-image: url("../../../../assets/graficoVirus.png");
     background-size: cover;
     background-repeat: no-repeat;

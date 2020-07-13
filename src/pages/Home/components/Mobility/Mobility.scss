@@ -50,8 +50,11 @@
             align-items: center;
             text-align: center;
             .content-left {
-                margin-bottom: 240px;
+                margin-bottom: 150px;
                 max-width: 100%;
+                img {
+                    max-width: 400px;
+                }
             }
             .content-right {
                 max-width: 100%;
