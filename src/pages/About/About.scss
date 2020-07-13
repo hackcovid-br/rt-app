@@ -1,104 +1,91 @@
-.about-us__hero {
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-}
-
-.about-us__presentation {
-  text-align: center;
-  padding-bottom: 5vh;
-
-  h1 {
-    font-size: 34px;
-    color: $grey-primary
-  }
-}
-
-.about-us {
-  display: grid;
-  grid-auto-rows: 1fr;
-
-  > section {
-    display: flex;
-    align-items: center;
-
-    &:not(:first-child, :last-child) {
-      padding-top: $section-vertical-spacing;
-      padding-bottom: $section-vertical-spacing;
+.about-us{
+  &__hero {
+    height: 100vh;
+    .bg-wrapper {
+      text-align: right;
+      height: 0;
+      z-index: 1;
     }
-  }
-
-  > :nth-child(even){
-    background-color: $bg;
-  } 
-
-  h3 {
-    color: $fg_title;
-    @include sectionTitleSizes;
-  }
-
-  h2 {
-    max-width: 800px;
-    margin: 0 auto;
-    @include sectionTitleSizes;
-  }
-
-  .section-text {
-    @include above($mobile-cutoff + 1px) {
-      width: 80%;
-    }
-    @include sectionTextSizes;
-  }
-
-  .divided {
-    @include above($alternative-mobile-cutoff + 1px) {
+  
+    .container {
       display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
   
-      > :nth-child(odd) {
-        padding-right: 10px;
+    .icon-and-title {
+      text-align: center;
+      display: inline-block;
+      > h1 {
+        font-weight: normal;
+        font-size: 22px;
       }
-  
-      > :nth-child(even) {
-        padding-left: 10px;
+    }
+    .presentation {
+      > h2 {
+        font-size: 45px;
+        font-weight: 500;
+        max-width: 710px;
+
+        &.small {
+          font-size: 32px;
+        }
       }
     }
   }
+  
+  
+  &__content {
+    background-color: $bg;
 
-  .text-side {
-    @include above($alternative-mobile-cutoff + 1px) {
-      width: 60%;
+    .container {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  
+    .columns {
+      display: flex;
+      justify-content: space-around;
+  
+      .content__column {
+        padding: 0 1rem;
+        max-width: 428px;
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+    }
+
+    .content__column {
+      text-align: center;
+
+      > img {
+        max-width: min-content;
+        width: 100%;
+      }
+
+      > h3 {
+        font-size: 32px;
+        font-weight: 500;
+      }
+
+      > p {
+        font-size: 22px;
+        text-align: left;
+      }
     }
   }
-
-  .image-side > img {
-    display: block;
-    width: 100%;
+  
+  &__ending .ending-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 45px;
+    max-width: 922px;
     margin: 0 auto;
-    @include above($alternative-mobile-cutoff + 1px) {
-      max-width: 430px;
+    padding: 5rem 0;
+
+    &.small {
+      font-size: 32px;
     }
-    @include below($alternative-mobile-cutoff) {
-      max-width: 290px;
-    }
-  }
-
-  .ending {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-
-    h3 {
-      color: $fg;
-      max-width: 1033px;
-      margin: 0 auto;
-    }
-  }
-}
-
-.logo-hackcovid-container {
-  text-align: center;
-  padding: 15vh 0 0;
-
-  img {
-    width: 100%;
-    max-width: 296px;
   }
 }

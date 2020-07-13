@@ -1,7 +1,7 @@
 import './Cases.scss';
 import CasesInfo from 'components/CasesInfo';
+import { Link } from 'gatsby';
 import { useState, useEffect } from 'react';
-import Button from 'components/Button';
 
 export default function Cases() {
     const [casesData, setCasesData] = useState([]);
@@ -43,7 +43,9 @@ export default function Cases() {
                     )}
                 </div>
                 <div className="button-wrapper">
-                    <Button label="Veja Agora" />
+                  <Link to="/casos" className="default-button"> 
+                    Veja Agora
+                  </Link>
                 </div>
             </div>
         </section>
