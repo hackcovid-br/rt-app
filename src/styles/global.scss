@@ -113,3 +113,10 @@ section.footer {
     color:$fg;
   }
 }
+
+@include below(500px) {
+  .default-button {
+    font-size: 18px;
+    padding: 10px 14px;
+}
+}

@@ -1,10 +1,12 @@
 .hero-container {
   height: 100vh;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-image: url("../../../../assets/fundoHero.png");
-  @include below(900px){
-    background-position-y: 35%;
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+  .background {
+    width: 100%;
+    position: absolute;
+    top: -50px;
   }
 
   .container {
@@ -12,9 +14,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img {
+    &-box {
+      position: absolute;
+      left: 50px;
+      top: 40%;
+    }
+
+    
+    .logo {
       width: 105px;
       height: 44px;
+      display: block;
+      margin: 0 auto;
     }
   }
 
@@ -37,43 +48,72 @@
       }
     }
 
-    // @include below(900px) {
-    //   font-size: 50px;
-    //   line-height: 70px;
-    //   max-width: 570px;
-    //   padding-bottom: 70px;
-    // }
-    // @include below(520px) {
-    //   font-size: 32px;
-    //   line-height: 50px;
-    //   max-width: 300px;
-    //   padding-bottom: 40px;
-    // }
   }
 
-  // .hc-loco-wrapper {
-  //   max-width: 550px;
-  //   margin: 0 auto;
-  //   padding: 0 20px;
-
-  //   #eb9z872tqwzv4 {
-  //     animation-name: eb9z872tqwzv4_f_o, eb9z872tqwzv4_s_o, eb9z872tqwzv4_s_do;
-  //     animation-duration: 3300ms;
-  //     animation-fill-mode: forwards;
-  //     animation-timing-function: linear;
-  //     animation-direction: normal;
-  //     animation-iteration-count: 1;
-  //   }
-  //   #eb9z872tqwzv5 {
-  //     animation: eb9z872tqwzv5_c_o 3300ms linear 1 normal forwards;
-  //   }
-
-  //   svg {
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  // }
 }
+
+@include below(1050px) {
+  .hero-container { 
+    height: 50vh;
+    // background-image: url("../../../../assets/graficoVirus.png");
+    // background-size: contain;
+    .container {
+      &-box {
+        top: 40%;
+        .hero-title {
+          span {
+            &:first-child {
+              font-size: 52px;
+            }
+            
+            &:last-child {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include below(700px) {
+  .hero-container { 
+    background-image: url("../../../../assets/graficoVirus.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    .background {
+      display: none;
+    }
+  }
+}
+
+@include below(420px) {
+  .hero-container { 
+    .container-box {
+      left: 50%;
+      transform: translateX(-50%);
+      .hero-title {
+        width: 100%;
+        min-width: 370px;
+        span {
+          &:first-child {
+            font-size: 35px;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .container {
+      .logo {
+        width: 65px;
+      }
+    }
+  }
+}
+
 
 @keyframes eb9z872tqwzv5_c_o {
   0% {

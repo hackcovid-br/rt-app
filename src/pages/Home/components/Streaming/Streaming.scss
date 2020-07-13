@@ -14,17 +14,16 @@
     }
 
     .content-left {
-         .default-button {
+        .default-button {
             font-size: 12px;
         }
 
-         .content__description {
+        .content__description {
             margin: 15px 0px 35px 0px;
         }
     }
-    
-    @include above(1024px) {
 
+    @include above(1024px) {
         .container {
             display: flex;
             flex-direction: row;
@@ -54,20 +53,37 @@
                 }
             }
         }
+    }
 
-        .content-left {
-            margin-top: 40px;
-            width: 525px;
-            max-width: 49%;
-            .default-button {
-                font-size: 22px;
+    @include below(1000px) {
+        .streaming-container {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .content-left {
+                    margin-bottom: 60px;
+                    max-width: 100%;
+                }
+                .content-right {
+                    max-width: 100%;
+                }
             }
         }
+    }
 
-        .content-right {
-            max-width: 49%;
-            width: 500px;
-            height: 420px;
+    @include below(500px) {
+        .streaming-container {
+            padding-bottom: 0;
+            .container {
+                .content-left {
+                }
+                .content-right {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
