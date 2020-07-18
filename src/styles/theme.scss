@@ -7,6 +7,9 @@
  * fg = foreground
  */
 
+ $default_red: $red_berry;
+ $default_black: $shark;
+
 $bg: $athens_gray;
 $bg_header: $white;
 
@@ -19,11 +22,12 @@ $fg_featured: $red_berry;
 $fg_link: $red_berry;
 $fg_title: $silver_chalice;
 
-
 $grey-primary: $emperor;
 $grey-light: $silver_chalice;
 
-$default_black: $shark;
 $bg_button_hover: $alto;
 
 $main-title: $fg_title;
+
+$default_button_bg: $iron;
+$default_active_button_bg: $default_red;
