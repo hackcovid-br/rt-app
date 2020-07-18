@@ -1,16 +1,27 @@
 import "./Hero.scss"
-import HCLogo from "./HCLogo"
+
+import bg from 'assets/graficoGirl.png'
+import logo from 'assets/logo2x.svg'
 
 function Hero() {
   return (
     <div className="hero-container">
+      <img className="background" src={bg} alt="Logo hack Covid"/>
       <div className="container">
-        <h1 className="hero-title">
-          Empodere-se com ciência e dados<span>.</span>
-        </h1>
-        <HCLogo />
+        <div className="container-box">
+          <h1 className="hero-title">
+            <span>
+              Empodere-se 
+            </span>
+            <span>
+              com ciência e dados
+            </span>
+          </h1>
+          <img className="logo" src={logo} alt="Logo hack Covid"/>
+        </div>
       </div>
     </div>
   )
 }
 export default Hero
+

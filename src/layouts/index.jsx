@@ -1,4 +1,5 @@
 import "./Layout.scss"
+import Footer from "components/Footer"
 import Header from "components/Header"
 import { Helmet } from "react-helmet"
 
@@ -17,6 +18,7 @@ function Layout({ children }) {
       </Helmet>
       <Header />
       {children}
+      <Footer />
     </div>
   )
 }

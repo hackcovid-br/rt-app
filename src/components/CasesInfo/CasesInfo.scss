@@ -3,13 +3,25 @@
     display: flex;
     align-items: center;
     @include below(1024px){
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     .signal {
-        width: 112px;
-        height: 112px;
+        @include below(321px){
+            width: 80px;
+            height: 80px;
+        }
+
+        @include below(1024px){
+            img {
+                width: 60%;
+            }
+        }
+        width: 114px;
+        height: 114px;
         border-radius: 100px;
         margin-right: 19px;
+        display: flex;
+        justify-content: center;
         &.red {
             background-color: $cases_red;
         }
