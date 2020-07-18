@@ -15,9 +15,9 @@
     "format": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
-    "@bbjacob123/cases-map-covid": "https://api.observablehq.com/@bbjacob123/cases-map-covid.tgz?v=3",
     "@bbjacob123/cases-chart": "https://api.observablehq.com/@bbjacob123/cases-chart.tgz?v=3",
-    "@bbjacob123/deaths-chart": "https://api.observablehq.com/@bbjacob123/deaths-chart.tgz?v=3",
+    "@bbjacob123/cases-map-covid": "https://api.observablehq.com/@bbjacob123/cases-map-covid.tgz?v=3",
+    "@bbjacob123/mortes-chart": "https://api.observablehq.com/@bbjacob123/mortes-chart.tgz?v=3",
     "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1300.tgz?v=3",
     "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1475.tgz?v=3",
     "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted@982.tgz?v=3",

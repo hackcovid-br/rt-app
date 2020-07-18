@@ -1,4 +1,4 @@
-import define from '@bbjacob123/deaths-chart';
+import define from '@bbjacob123/mortes-chart';
 
 import VariableChart from './VariableChart';
 

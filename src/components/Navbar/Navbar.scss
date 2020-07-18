@@ -50,6 +50,9 @@
   &:hover {
     color: #232224;
   }
+  &.current {
+    color: $fg_featured;
+  }
 }
 
 .navbar__toggle {
