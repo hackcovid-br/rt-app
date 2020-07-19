@@ -15,13 +15,15 @@
     "format": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
+    "@bernaferrari/brazil-coronavirus-daily-cases-map-covid-19-not-working": "https://api.observablehq.com/@bernaferrari/brazil-coronavirus-daily-cases-map-covid-19-not-working.tgz?v=3",
     "@bbjacob123/cases-chart": "https://api.observablehq.com/@bbjacob123/cases-chart.tgz?v=3",
     "@bbjacob123/cases-map-covid": "https://api.observablehq.com/@bbjacob123/cases-map-covid.tgz?v=3",
-    "@bbjacob123/mortes-chart": "https://api.observablehq.com/@bbjacob123/mortes-chart.tgz?v=3",
     "@bbjacob123/fan-chart": "https://api.observablehq.com/@bbjacob123/fan-chart@1300.tgz?v=3",
+    "@bbjacob123/mortes-chart": "https://api.observablehq.com/@bbjacob123/mortes-chart.tgz?v=3",
     "@bbjacob123/rt-chart": "https://api.observablehq.com/@bbjacob123/rt-chart@1475.tgz?v=3",
     "@bbjacob123/rt-chart-inverted": "https://api.observablehq.com/@bbjacob123/rt-chart-inverted@982.tgz?v=3",
     "@observablehq/runtime": "4",
+    "@open-wc/webpack-import-meta-loader": "^0.4.7",
     "@reach/router": "^1.3.4",
     "@santanacostamarco/brazil-coronavirus-daily-cases-map-covid-19": "https://api.observablehq.com/d/5e2f7fffa0f4c03b@1903.tgz?v=3",
     "@santanacostamarco/covid-19-casos-por-estado": "https://api.observablehq.com/d/8f3c65cc05d8cbfe@669.tgz?v=3",
