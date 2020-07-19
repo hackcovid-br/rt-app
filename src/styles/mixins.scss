@@ -1,6 +1,9 @@
 @mixin headerItemSpacing {
-  padding: 15px;
+  padding: 6px;
   margin: 0 20px;
+  border-width: 8px 0;
+  border-style: solid;
+  border-color: transparent;
 }
 
 @mixin sectionTitleSizes {

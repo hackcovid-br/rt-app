@@ -1,0 +1,10 @@
+.cases-data {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1240px;
+  margin: 0 auto;
+  @include below(1024px){
+      flex-direction: column;
+  }
+  margin-bottom: 75px;
+}

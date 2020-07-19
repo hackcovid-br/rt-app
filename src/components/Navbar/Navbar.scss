@@ -47,9 +47,11 @@
   font-weight: 400;
   color: #838383;
   transition: color .2s linear;
-  // @include headerItemSpacing;
   &:hover {
     color: #232224;
+  }
+  &.current {
+    color: $fg_featured;
   }
 }
 
