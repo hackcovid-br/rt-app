@@ -3,7 +3,7 @@ import './Cases.scss';
 import CasesSummary from "components/Cases"
 import CasesChart from 'components/Charts/Cases';
 import DeathsChart from 'components/Charts/Deths';
-// import Evolution from 'components/Charts/Evolution';
+import Evolution from 'components/Charts/Evolution';
 import LastDate from 'components/LastDate';
 // import CasesBrazilMap from 'components/Maps/CasesBrazil';
 import StatesGrid from 'components/StatesGrid';
@@ -40,8 +40,8 @@ export default function Cases() {
             Comparação entre estados
           </h2>
 
-          {/* <Evolution type={chartType}/> */}
-          {/* <CasesBrazilMap /> */}
+          <Evolution type={chartType}/>
+          {/* <CasesBrazilMap type={chartType} /> */}
          
           <div className="chart-switcher">
             <button className={chartType === 'deaths' ? 'current' : ''} 

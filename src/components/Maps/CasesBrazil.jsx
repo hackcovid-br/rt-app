@@ -3,17 +3,39 @@ import {
   Runtime, 
   Inspector
  } from "@observablehq/runtime";
- import { useRef, useEffect } from "react";
+ import { 
+   useRef, 
+   useEffect 
+  } from "react";
 
- export default function CasesBrazilMap () {
-  const chartRef = useRef(null);
+ export default function CasesBrazilMap ({type}) {
+
+  const cells = [
+    "map",
+    "style",
+    "viewof day",
+  ];
+
+  const observables = cells.map(cell => {
+    return {
+      name: cell,
+      element: useRef(null)
+    }
+  });
 
   useEffect(() => {
     const runtime = new Runtime();
-    runtime.module(define, () => {
-      return new Inspector(chartRef.current)
+    const module = runtime.module(define, name => {
+      const observable = observables.find(observable => observable.name === name);
+      if (observable) {
+        return new Inspector(observable.element.current)
+      }
     })
-  }, [])
+    module.redefine("confirmed_or_deaths", type)
+  }, [type])
 
-  return <div ref={chartRef} />
+  return observables.map(observable => (
+    <div key={observable.name} ref={observable.element}/>
+  ))
+  
 }
