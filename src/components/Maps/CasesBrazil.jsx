@@ -9,48 +9,37 @@ import {
   } from "react";
 
  export default function CasesBrazilMap () {
-  const elementRef0 = useRef(null);
-  const elementRef1 = useRef(null);
 
-  const elementRef2 = useRef(null);
+  const cells = [
+    "viewof confirmed_or_deaths",
+    "viewof scale",
+    "viewof day",
+    "map",
+    "style",
+    "draw",
+    "indexSetter"
+  ];
 
-  const elementRef3 = useRef(null);
-
-  const elementRef4 = useRef(null);
-
-  const elementRef5 = useRef(null);
-
-  const elementRef6 = useRef(null);
+  const observables = cells.map(cell => {
+    return {
+      name: cell,
+      element: useRef(null)
+    }
+  });
 
   useEffect(() => {
     const runtime = new Runtime();
     runtime.module(define, name => {
-      if (name === "viewof confirmed_or_deaths")
-        return new Inspector(elementRef0.current);
-      if (name === "viewof scale")
-        return new Inspector(elementRef1.current);
-      if (name === "viewof day")
-        return new Inspector(elementRef2.current);
-      if (name === "map")
-        return new Inspector(elementRef3.current);
-      if (name === "style")
-        return new Inspector(elementRef4.current);
-      if (name === "draw")
-        return new Inspector(elementRef5.current);
-      if (name === "indexSetter")
-        return new Inspector(elementRef6.current);
+      const observable = observables.find(observable => observable.name === name);
+      if (observable) {
+        return new Inspector(observable.element.current)
+      }
     })
   }, [])
 
   return (
-    <>
-    <div ref={elementRef0}/>
-    <div ref={elementRef1}/>
-    <div ref={elementRef2}/>
-    <div ref={elementRef3}/>
-    <div ref={elementRef4}/>
-    <div ref={elementRef5}/>
-    <div ref={elementRef6}/>
-    </>
+    observables.map(observable => (
+      <div key={observable.name} ref={observable.element}/>
+    ))
   )
 }
