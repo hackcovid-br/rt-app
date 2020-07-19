@@ -1,4 +1,4 @@
-import define from "@bernaferrari/brazil-coronavirus-daily-cases-map-covid-19-not-working";
+import define from "@bbjacob123/cases-map-covid";
 import {
   Runtime, 
   Inspector
@@ -8,16 +8,12 @@ import {
    useEffect 
   } from "react";
 
- export default function CasesBrazilMap () {
+ export default function CasesBrazilMap ({type}) {
 
   const cells = [
-    "viewof confirmed_or_deaths",
-    "viewof scale",
-    "viewof day",
     "map",
     "style",
-    "draw",
-    "indexSetter"
+    "viewof day",
   ];
 
   const observables = cells.map(cell => {
@@ -29,17 +25,17 @@ import {
 
   useEffect(() => {
     const runtime = new Runtime();
-    runtime.module(define, name => {
+    const module = runtime.module(define, name => {
       const observable = observables.find(observable => observable.name === name);
       if (observable) {
         return new Inspector(observable.element.current)
       }
     })
-  }, [])
+    module.redefine("confirmed_or_deaths", type)
+  }, [type])
 
-  return (
-    observables.map(observable => (
-      <div key={observable.name} ref={observable.element}/>
-    ))
-  )
+  return observables.map(observable => (
+    <div key={observable.name} ref={observable.element}/>
+  ))
+  
 }

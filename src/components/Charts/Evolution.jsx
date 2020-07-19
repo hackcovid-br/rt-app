@@ -1,20 +1,34 @@
+import define from "@bbjacob123/covid-19-brasil-por-estado-uf";
 import { Runtime, Inspector } from "@observablehq/runtime";
-import define from "@santanacostamarco/covid-19-casos-por-estado";
 import { useRef, useEffect } from "react";
 
 export default function Evolution ({ type }) {
-  const chartRef = useRef(null);
+
+  const cells = [
+    "viewof stateSelection",
+    "chart",
+  ];
+
+  const observables = cells.map(cell => {
+    return {
+      name: cell,
+      element: useRef(null)
+    }
+  });
 
   useEffect(() => {
     const runtime = new Runtime();
-    const chart = runtime.module(define, name => {
-      if (name === "chart") {
-        return new Inspector(chartRef.current)
+    const module = runtime.module(define, name => {
+      const observable = observables.find(observable => observable.name === name);
+      if (observable) {
+        return new Inspector(observable.element.current)
       }
     })
 
-    chart.redefine('y_type', type);
+    module.redefine('ySelection', type);
   }, [type])
 
-  return <div ref={chartRef} />
+  return observables.map(observable => (
+    <div key={observable.name} ref={observable.element}/>
+  ))
 }
