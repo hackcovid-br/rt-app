@@ -40,9 +40,6 @@ export default function Cases() {
             Comparação entre estados
           </h2>
 
-          <Evolution type={chartType}/>
-          {/* <CasesBrazilMap type={chartType} /> */}
-         
           <div className="chart-switcher">
             <button className={chartType === 'deaths' ? 'current' : ''} 
               onClick={ () => setChartType('deaths') }
@@ -57,6 +54,10 @@ export default function Cases() {
             </button>
           </div>
 
+          <Evolution type={chartType}/>
+
+          {/* <CasesBrazilMap type={chartType} /> */}
+
           <StatesGrid render={ uf => (
             <>
               { chartType === 'confirmed' && <CasesChart uf={ uf } /> }
@@ -67,6 +68,17 @@ export default function Cases() {
         </section>
 
       </div>
+      <section className="footer">
+        <div className="container">
+          <h4> Referências e Recursos </h4>
+          <ul>
+            <li> Brasil.io (<a href="https://brasil.io/home/" target="_blank" 
+                rel="noopener noreferrer"
+              > https://brasil.io/home/ </a>)
+            </li>
+          </ul>
+        </div>
+      </section>
 
     </Layout>
 
