@@ -1,4 +1,4 @@
-import define from "@bbjacob123/cases-map-covid";
+import define from "@bbjacob123/mapa-brasil-covid-19";
 import {
   Runtime, 
   Inspector
@@ -11,9 +11,9 @@ import {
  export default function CasesBrazilMap ({type}) {
 
   const cells = [
+    "viewof week",
     "map",
     "style",
-    "viewof day",
   ];
 
   const observables = cells.map(cell => {
