@@ -3,7 +3,7 @@ import statesOfBrazil from 'helpers/statesOfBrazil'
 
 import { useMaxWidth } from 'hooks'
 
-export default function StateGrid({ render }) {
+export default function StatesGrid({ render }) {
 
   const isSmallDevice = useMaxWidth()
   const isMediumDevice = useMaxWidth("1080px")

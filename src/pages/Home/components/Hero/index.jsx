@@ -1,7 +1,7 @@
 import "./Hero.scss"
 
-import logo from 'assets/logo2x.svg'
 import bg from 'assets/graficoGirl.png'
+import logo from 'assets/logo2x.svg'
 
 function Hero() {
   return (

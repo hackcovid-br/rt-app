@@ -1,3 +1,4 @@
+import { globalHistory } from '@reach/router';
 import { Link } from "gatsby"
 
 export default function NavLinks ({ isVisible }) {
@@ -5,25 +6,43 @@ export default function NavLinks ({ isVisible }) {
     {
       name: "Home",
       link: "/",
-    },{
+    },
+    {
       name: "Transmissão",
       link: "/rt",
-    },{
+    },
+    {
       name: "Mobilidade",
       link: "/mobilidade",
-    },{
+    },
+    {
+      name: "Casos",
+      link: "/casos"
+    },
+    {
       name: "Sobre",
       link: "/sobre"
     },
   ];
+  
+  const pathname = globalHistory.location.pathname;
 
   return (
     <ul className={ `navbar ${isVisible ? 'visible' : ''}`} >
       {navItems.map(item => (
         <li key={item.link}>
-          <Link to={item.link} className={`navbar__item`}>
-            {item.name}
-          </Link>
+          { 
+            pathname !== item.link &&
+              <Link to={item.link} className="navbar__item">
+                {item.name}
+              </Link> 
+          }
+          { 
+            pathname === item.link &&
+              <span className="navbar__item current">
+                {item.name}
+              </span> 
+          }
         </li>
       ))}
     </ul>

@@ -1,6 +1,6 @@
 import "./CountrySummary.scss"
 
-import BarChart from "components/BarChart"
+import BarChart from "components/Charts/BarChart"
 
 import { useMaxWidth } from 'hooks';
 
