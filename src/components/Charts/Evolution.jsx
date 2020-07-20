@@ -1,4 +1,4 @@
-import define from "@bbjacob123/covid-19-brasil-por-estado-uf";
+import define from "@bbjacob123/covid-19-brasil-estado-curvas";
 import { Runtime, Inspector } from "@observablehq/runtime";
 import { useRef, useEffect } from "react";
 
