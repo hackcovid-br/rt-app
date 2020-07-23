@@ -76,7 +76,7 @@ section.footer {
 
 section.footer {
   background-color: $bg_footer;
-  
+
   ul {
     color: $fg_secondary;
   }
@@ -88,7 +88,7 @@ section.footer {
   @include sectionTextSizes;
 }
 
-.bold { 
+.bold {
   font-weight: bold;
 }
 
@@ -97,7 +97,7 @@ section.footer {
 }
 
 .default-button {
-  background: #FFFFFF;
+  background: #ffffff;
   border: none;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 57.5px;
@@ -106,17 +106,14 @@ section.footer {
   color: $fg_secondary;
   padding: 20px 40px;
   text-decoration: none;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 
   &:hover {
     background-color: $bg_button_hover;
-    color:$fg;
+    color: $fg;
   }
-}
 
-@include below(500px) {
-  .default-button {
-    font-size: 18px;
-    padding: 10px 14px;
-}
+  @include below(500px){
+    font-size: 14px;
+  }
 }
