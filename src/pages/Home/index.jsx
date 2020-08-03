@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import Apply from "./components/Apply"
 import Because from "./components/Because"
-import Cases from "./components/Cases"
 import CasesContainer from './components/CasesContainer';
 import Hero from "./components/Hero"
 import Mobility from "./components/Mobility"
@@ -19,7 +18,6 @@ function Home() {
       <Hero />
       <CasesContainer />
       <Because />
-      <Cases />
       <Streaming />
       <Mobility />
       <Apply />
