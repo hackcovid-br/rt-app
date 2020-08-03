@@ -35,5 +35,18 @@ module.exports = {
         data: '@import "./src/styles/internal";',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-173763785-1",
+        head: true,
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        pageTransitionDelay: 0,
+        defer: true,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "hackcovid.com.br",
+      },
+    },
   ],
 }
